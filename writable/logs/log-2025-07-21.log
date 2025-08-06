@@ -1,0 +1,157 @@
+DEBUG - 2025-07-21 05:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 05:50:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 05:50:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 05:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 05:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-21 05:50:36 --> ErrorException: Trait "App\Controllers\CodeIgniter\HTTP\ResponseInterface" not found
+[Method: GET, Route: employeeslist]
+in APPPATH\Controllers\RmsController.php on line 5.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-21 05:57:27 --> ErrorException: Trait "App\Controllers\CodeIgniter\HTTP\ResponseInterface" not found
+[Method: GET, Route: employeeslist]
+in APPPATH\Controllers\RmsController.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-21 05:57:29 --> ErrorException: Trait "App\Controllers\CodeIgniter\HTTP\ResponseInterface" not found
+[Method: GET, Route: employeeslist]
+in APPPATH\Controllers\RmsController.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-21 05:57:54 --> ErrorException: Trait "App\Controllers\CodeIgniter\HTTP\ResponseInterface" not found
+[Method: GET, Route: employeeslist]
+in APPPATH\Controllers\RmsController.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-21 05:57:55 --> ErrorException: Trait "App\Controllers\CodeIgniter\HTTP\ResponseInterface" not found
+[Method: GET, Route: employeeslist]
+in APPPATH\Controllers\RmsController.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-21 05:57:56 --> ErrorException: Trait "App\Controllers\CodeIgniter\HTTP\ResponseInterface" not found
+[Method: GET, Route: employeeslist]
+in APPPATH\Controllers\RmsController.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-21 05:57:56 --> ErrorException: Trait "App\Controllers\CodeIgniter\HTTP\ResponseInterface" not found
+[Method: GET, Route: employeeslist]
+in APPPATH\Controllers\RmsController.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-21 05:57:56 --> ErrorException: Trait "App\Controllers\CodeIgniter\HTTP\ResponseInterface" not found
+[Method: GET, Route: employeeslist]
+in APPPATH\Controllers\RmsController.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-21 05:57:57 --> ErrorException: Trait "App\Controllers\CodeIgniter\HTTP\ResponseInterface" not found
+[Method: GET, Route: employeeslist]
+in APPPATH\Controllers\RmsController.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-21 05:58:14 --> ErrorException: Trait "App\Controllers\CodeIgniter\HTTP\ResponseInterface" not found
+[Method: GET, Route: employeeslist]
+in APPPATH\Controllers\RmsController.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-21 05:58:15 --> ErrorException: Trait "App\Controllers\CodeIgniter\HTTP\ResponseInterface" not found
+[Method: GET, Route: employeeslist]
+in APPPATH\Controllers\RmsController.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-21 05:58:16 --> ErrorException: Trait "App\Controllers\CodeIgniter\HTTP\ResponseInterface" not found
+[Method: GET, Route: employeeslist]
+in APPPATH\Controllers\RmsController.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-21 05:58:35 --> ErrorException: Trait "App\Controllers\CodeIgniter\HTTP\ResponseInterface" not found
+[Method: GET, Route: employeeslist]
+in APPPATH\Controllers\RmsController.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-21 05:59:11 --> ErrorException: Trait "App\Controllers\CodeIgniter\HTTP\ResponseInterface" not found
+[Method: GET, Route: employeeslist]
+in APPPATH\Controllers\RmsController.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-21 05:59:13 --> ErrorException: Trait "App\Controllers\CodeIgniter\HTTP\ResponseInterface" not found
+[Method: GET, Route: employeeslist]
+in APPPATH\Controllers\RmsController.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-07-21 06:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 06:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 06:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 06:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 06:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 06:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 06:34:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 06:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 07:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-21 07:12:35 --> ErrorException: Undefined variable $model
+[Method: POST, Route: personal_info_save]
+in APPPATH\Controllers\RmsController.php on line 60.
+ 1 APPPATH\Controllers\RmsController.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $model', 'C:\\xampp\\htdocs\\tempp\\app\\Controllers\\RmsController.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->personal_info_save()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-21 07:23:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 07:25:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 07:26:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 07:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 07:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 07:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 07:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-21 07:47:26 --> ErrorException: Undefined variable $result
+[Method: POST, Route: personal_info_save]
+in APPPATH\Controllers\RmsController.php on line 72.
+ 1 APPPATH\Controllers\RmsController.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'C:\\xampp\\htdocs\\tempp\\app\\Controllers\\RmsController.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->personal_info_save()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-21 07:51:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 07:53:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 07:54:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 07:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 08:00:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 08:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 08:02:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 08:04:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 08:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 08:30:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 08:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-21 08:48:53 --> Error: Class "App\Models\IdensModel" not found
+[Method: GET, Route: new_emp_joining]
+in APPPATH\Controllers\RmsController.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\RmsController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-21 08:49:14 --> Error: Class "App\Models\IdensModel" not found
+[Method: GET, Route: new_emp_joining]
+in APPPATH\Controllers\RmsController.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\RmsController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-21 08:49:21 --> Error: Class "App\Controllers\IdensModel" not found
+[Method: GET, Route: new_emp_joining]
+in APPPATH\Controllers\RmsController.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\RmsController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-21 08:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 09:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 09:36:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-21 09:36:52 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\PersonalModel::validateForeignKeys
+[Method: POST, Route: personal_info_save]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Models\PersonalModel.php(72): CodeIgniter\Model->__call('validateForeignKeys', [...])
+ 2 APPPATH\Controllers\RmsController.php(137): App\Models\PersonalModel->saveData('personal_info', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->personal_info_save()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-21 09:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 09:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 11:23:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-21 11:23:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

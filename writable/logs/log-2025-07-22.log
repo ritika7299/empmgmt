@@ -1,0 +1,690 @@
+DEBUG - 2025-07-22 05:34:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 05:34:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 05:34:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 05:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 05:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 05:35:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 05:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 05:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 05:41:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 06:23:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 06:24:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 06:24:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 06:32:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 06:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 06:32:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 06:56:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 07:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 07:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 07:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 07:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 08:39:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 08:39:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-22 08:39:56 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^ in C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "id...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "id...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "id...')
+#4 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "id...', Array, false)
+#5 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\tempp\app\Models\PersonalModel.php(57): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(128): App\Models\PersonalModel->saveData('iden_details', Array)
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+#11 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-07-22 08:39:57 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+[Method: POST, Route: identification_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(128): App\Models\PersonalModel->saveData('iden_details', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-22 08:39:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (38, \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2025-07-22 08:39:56\', \'2025-07-22 08:39:56\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (38, \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2025-07-22 08:39:56\', \'2025-07-22 08:39:56\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(128): App\Models\PersonalModel->saveData('iden_details', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-22 08:39:57 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^', 'C:\\xampp\\htdocs\\tempp\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (38, \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2025-07-22 08:39:56\', \'2025-07-22 08:39:56\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (38, \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2025-07-22 08:39:56\', \'2025-07-22 08:39:56\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (38, \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2025-07-22 08:39:56\', \'2025-07-22 08:39:56\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(128): App\Models\PersonalModel->saveData('iden_details', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-22 08:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 08:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-22 08:51:20 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^ in C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "id...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "id...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "id...')
+#4 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "id...', Array, false)
+#5 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\tempp\app\Models\PersonalModel.php(57): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(128): App\Models\PersonalModel->saveData('iden_details', Array)
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+#11 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-07-22 08:51:20 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+[Method: POST, Route: identification_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(128): App\Models\PersonalModel->saveData('iden_details', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-22 08:51:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (39, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 08:51:20\', \'2025-07-22 08:51:20\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (39, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 08:51:20\', \'2025-07-22 08:51:20\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(128): App\Models\PersonalModel->saveData('iden_details', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-22 08:51:20 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^', 'C:\\xampp\\htdocs\\tempp\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (39, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 08:51:20\', \'2025-07-22 08:51:20\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (39, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 08:51:20\', \'2025-07-22 08:51:20\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (39, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 08:51:20\', \'2025-07-22 08:51:20\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(128): App\Models\PersonalModel->saveData('iden_details', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-22 09:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 09:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-22 09:32:32 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^ in C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "id...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "id...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "id...')
+#4 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "id...', Array, false)
+#5 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\tempp\app\Models\PersonalModel.php(57): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(128): App\Models\PersonalModel->saveData('iden_details', Array)
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+#11 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-07-22 09:32:32 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+[Method: POST, Route: identification_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(128): App\Models\PersonalModel->saveData('iden_details', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-22 09:32:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (40, \'2222222222222222\', \'1111111111111111\', \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2025-07-22 09:32:32\', \'2025-07-22 09:32:32\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (40, \'2222222222222222\', \'1111111111111111\', \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2025-07-22 09:32:32\', \'2025-07-22 09:32:32\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(128): App\Models\PersonalModel->saveData('iden_details', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-22 09:32:32 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^', 'C:\\xampp\\htdocs\\tempp\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (40, \'2222222222222222\', \'1111111111111111\', \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2025-07-22 09:32:32\', \'2025-07-22 09:32:32\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (40, \'2222222222222222\', \'1111111111111111\', \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2025-07-22 09:32:32\', \'2025-07-22 09:32:32\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (40, \'2222222222222222\', \'1111111111111111\', \'2222222222222222\', \'2222222222222222\', \'2222222222222222\', \'2025-07-22 09:32:32\', \'2025-07-22 09:32:32\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(128): App\Models\PersonalModel->saveData('iden_details', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-22 09:50:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 09:51:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-22 09:51:09 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^ in C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "id...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "id...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "id...')
+#4 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "id...', Array, false)
+#5 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\tempp\app\Models\PersonalModel.php(57): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(128): App\Models\PersonalModel->saveData('iden_details', Array)
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+#11 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-07-22 09:51:09 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+[Method: POST, Route: identification_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(128): App\Models\PersonalModel->saveData('iden_details', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-22 09:51:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (41, \'6666666666666666\', \'6666666666666666\', \'6666666666666666\', \'6666666666666666\', \'6666666666666666\', \'2025-07-22 09:51:09\', \'2025-07-22 09:51:09\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (41, \'6666666666666666\', \'6666666666666666\', \'6666666666666666\', \'6666666666666666\', \'6666666666666666\', \'2025-07-22 09:51:09\', \'2025-07-22 09:51:09\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(128): App\Models\PersonalModel->saveData('iden_details', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-22 09:51:09 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^', 'C:\\xampp\\htdocs\\tempp\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (41, \'6666666666666666\', \'6666666666666666\', \'6666666666666666\', \'6666666666666666\', \'6666666666666666\', \'2025-07-22 09:51:09\', \'2025-07-22 09:51:09\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (41, \'6666666666666666\', \'6666666666666666\', \'6666666666666666\', \'6666666666666666\', \'6666666666666666\', \'2025-07-22 09:51:09\', \'2025-07-22 09:51:09\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (41, \'6666666666666666\', \'6666666666666666\', \'6666666666666666\', \'6666666666666666\', \'6666666666666666\', \'2025-07-22 09:51:09\', \'2025-07-22 09:51:09\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(128): App\Models\PersonalModel->saveData('iden_details', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-22 10:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 10:02:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 10:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 10:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 10:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 10:51:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 10:51:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-22 10:51:40 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^ in C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "id...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "id...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "id...')
+#4 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "id...', Array, false)
+#5 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\tempp\app\Models\PersonalModel.php(57): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(130): App\Models\PersonalModel->saveData('iden_details', Array)
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+#11 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-07-22 10:51:40 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+[Method: POST, Route: identification_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(130): App\Models\PersonalModel->saveData('iden_details', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-22 10:51:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:51:40\', \'2025-07-22 10:51:40\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:51:40\', \'2025-07-22 10:51:40\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(130): App\Models\PersonalModel->saveData('iden_details', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-22 10:51:40 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^', 'C:\\xampp\\htdocs\\tempp\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:51:40\', \'2025-07-22 10:51:40\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:51:40\', \'2025-07-22 10:51:40\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:51:40\', \'2025-07-22 10:51:40\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(130): App\Models\PersonalModel->saveData('iden_details', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-22 10:51:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-22 10:51:54 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^ in C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "id...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "id...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "id...')
+#4 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "id...', Array, false)
+#5 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\tempp\app\Models\PersonalModel.php(57): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(130): App\Models\PersonalModel->saveData('iden_details', Array)
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+#11 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-07-22 10:51:54 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+[Method: POST, Route: identification_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(130): App\Models\PersonalModel->saveData('iden_details', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-22 10:51:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:51:54\', \'2025-07-22 10:51:54\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:51:54\', \'2025-07-22 10:51:54\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(130): App\Models\PersonalModel->saveData('iden_details', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-22 10:51:54 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^', 'C:\\xampp\\htdocs\\tempp\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:51:54\', \'2025-07-22 10:51:54\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:51:54\', \'2025-07-22 10:51:54\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:51:54\', \'2025-07-22 10:51:54\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(130): App\Models\PersonalModel->saveData('iden_details', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-22 10:52:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-22 10:52:00 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^ in C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "id...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "id...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "id...')
+#4 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "id...', Array, false)
+#5 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\tempp\app\Models\PersonalModel.php(57): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(130): App\Models\PersonalModel->saveData('iden_details', Array)
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+#11 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-07-22 10:52:00 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+[Method: POST, Route: identification_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(130): App\Models\PersonalModel->saveData('iden_details', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-22 10:52:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:52:00\', \'2025-07-22 10:52:00\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:52:00\', \'2025-07-22 10:52:00\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(130): App\Models\PersonalModel->saveData('iden_details', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-22 10:52:00 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^', 'C:\\xampp\\htdocs\\tempp\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:52:00\', \'2025-07-22 10:52:00\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:52:00\', \'2025-07-22 10:52:00\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:52:00\', \'2025-07-22 10:52:00\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(130): App\Models\PersonalModel->saveData('iden_details', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-22 10:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-22 10:52:21 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^ in C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "id...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "id...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "id...')
+#4 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "id...', Array, false)
+#5 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\tempp\app\Models\PersonalModel.php(57): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(130): App\Models\PersonalModel->saveData('iden_details', Array)
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+#11 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-07-22 10:52:21 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+[Method: POST, Route: identification_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(130): App\Models\PersonalModel->saveData('iden_details', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-22 10:52:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:52:21\', \'2025-07-22 10:52:21\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:52:21\', \'2025-07-22 10:52:21\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(130): App\Models\PersonalModel->saveData('iden_details', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-22 10:52:21 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;entry_date&quot; of relation &quot;iden_details&quot; does not exist
+LINE 1: ...aadhar&quot;, &quot;panno&quot;, &quot;voterid&quot;, &quot;passport&quot;, &quot;other&quot;, &quot;entry_dat...
+                                                             ^', 'C:\\xampp\\htdocs\\tempp\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:52:21\', \'2025-07-22 10:52:21\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:52:21\', \'2025-07-22 10:52:21\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (44, \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'3333333333333333\', \'2025-07-22 10:52:21\', \'2025-07-22 10:52:21\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "iden_details" ("personal_info_id", "aadhar", "panno", "voterid", "passport", "other", "entry_date", "modify_date") VALUES (:personal_info_id:, :aadhar:, :panno:, :voterid:, :passport:, :other:, :entry_date:, :modify_date:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(57): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(130): App\Models\PersonalModel->saveData('iden_details', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->identification_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-22 11:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-22 11:03:20 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: personal_info_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 941.
+ 1 SYSTEMPATH\Model.php(714): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(920): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\RmsController.php(77): CodeIgniter\Model->__call('saveData', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->personal_info_save()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-22 11:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-22 11:04:27 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: personal_info_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 941.
+ 1 SYSTEMPATH\Model.php(714): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(920): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\RmsController.php(77): CodeIgniter\Model->__call('saveData', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->personal_info_save()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-22 11:21:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-22 11:21:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

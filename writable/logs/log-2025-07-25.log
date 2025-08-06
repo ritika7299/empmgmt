@@ -1,0 +1,768 @@
+DEBUG - 2025-07-25 05:09:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 05:10:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 05:10:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 05:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 05:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 05:10:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 05:10:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 06:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 06:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 06:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 06:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 06:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 06:23:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 06:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 06:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 07:37:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 07:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 07:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 07:49:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 07:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 07:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 07:57:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-25 07:57:38 --> ErrorException: pg_query(): Query failed: ERROR:  new row for relation &quot;qualification_info&quot; violates check constraint &quot;qualification_info_qualification_level_check&quot;
+DETAIL:  Failing row contains (3, 55, graduation, rrrrrrrr, rrrrrrrrrr, rrrrrrrrr, 2025-06-26, 333.00, 500.00, 66.60). in C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "qu...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qu...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qu...')
+#4 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qu...', Array, false)
+#5 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\tempp\app\Models\PersonalModel.php(71): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_i...', Array)
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+#11 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-07-25 07:57:38 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  new row for relation &quot;qualification_info&quot; violates check constraint &quot;qualification_info_qualification_level_check&quot;
+DETAIL:  Failing row contains (3, 55, graduation, rrrrrrrr, rrrrrrrrrr, rrrrrrrrr, 2025-06-26, 333.00, 500.00, 66.60).
+[Method: POST, Route: qualification_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(71): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 07:57:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  new row for relation &quot;qualification_info&quot; violates check constraint &quot;qualification_info_qualification_level_check&quot;
+DETAIL:  Failing row contains (3, 55, graduation, rrrrrrrr, rrrrrrrrrr, rrrrrrrrr, 2025-06-26, 333.00, 500.00, 66.60).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (55, \'graduation\', \'rrrrrrrr\', \'rrrrrrrrrr\', \'rrrrrrrrr\', \'2025-06-26\', \'333\', \'500\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (55, \'graduation\', \'rrrrrrrr\', \'rrrrrrrrrr\', \'rrrrrrrrr\', \'2025-06-26\', \'333\', \'500\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(71): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 07:57:38 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  new row for relation &quot;qualification_info&quot; violates check constraint &quot;qualification_info_qualification_level_check&quot;
+DETAIL:  Failing row contains (3, 55, graduation, rrrrrrrr, rrrrrrrrrr, rrrrrrrrr, 2025-06-26, 333.00, 500.00, 66.60).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  new row for relation &quot;qualification_info&quot; violates check constraint &quot;qualification_info_qualification_level_check&quot;
+DETAIL:  Failing row contains (3, 55, graduation, rrrrrrrr, rrrrrrrrrr, rrrrrrrrr, 2025-06-26, 333.00, 500.00, 66.60).', 'C:\\xampp\\htdocs\\tempp\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (55, \'graduation\', \'rrrrrrrr\', \'rrrrrrrrrr\', \'rrrrrrrrr\', \'2025-06-26\', \'333\', \'500\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (55, \'graduation\', \'rrrrrrrr\', \'rrrrrrrrrr\', \'rrrrrrrrr\', \'2025-06-26\', \'333\', \'500\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (55, \'graduation\', \'rrrrrrrr\', \'rrrrrrrrrr\', \'rrrrrrrrr\', \'2025-06-26\', \'333\', \'500\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(71): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-25 07:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-25 07:58:08 --> ErrorException: pg_query(): Query failed: ERROR:  new row for relation &quot;qualification_info&quot; violates check constraint &quot;qualification_info_qualification_level_check&quot;
+DETAIL:  Failing row contains (4, 55, 13th, rrrrrrrr, rrrrrrrrrr, rrrrrrrrr, 2025-06-26, 333.00, 500.00, 66.60). in C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "qu...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qu...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qu...')
+#4 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qu...', Array, false)
+#5 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\tempp\app\Models\PersonalModel.php(71): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_i...', Array)
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+#11 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-07-25 07:58:08 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  new row for relation &quot;qualification_info&quot; violates check constraint &quot;qualification_info_qualification_level_check&quot;
+DETAIL:  Failing row contains (4, 55, 13th, rrrrrrrr, rrrrrrrrrr, rrrrrrrrr, 2025-06-26, 333.00, 500.00, 66.60).
+[Method: POST, Route: qualification_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(71): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 07:58:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  new row for relation &quot;qualification_info&quot; violates check constraint &quot;qualification_info_qualification_level_check&quot;
+DETAIL:  Failing row contains (4, 55, 13th, rrrrrrrr, rrrrrrrrrr, rrrrrrrrr, 2025-06-26, 333.00, 500.00, 66.60).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (55, \'13th\', \'rrrrrrrr\', \'rrrrrrrrrr\', \'rrrrrrrrr\', \'2025-06-26\', \'333\', \'500\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (55, \'13th\', \'rrrrrrrr\', \'rrrrrrrrrr\', \'rrrrrrrrr\', \'2025-06-26\', \'333\', \'500\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(71): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 07:58:08 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  new row for relation &quot;qualification_info&quot; violates check constraint &quot;qualification_info_qualification_level_check&quot;
+DETAIL:  Failing row contains (4, 55, 13th, rrrrrrrr, rrrrrrrrrr, rrrrrrrrr, 2025-06-26, 333.00, 500.00, 66.60).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  new row for relation &quot;qualification_info&quot; violates check constraint &quot;qualification_info_qualification_level_check&quot;
+DETAIL:  Failing row contains (4, 55, 13th, rrrrrrrr, rrrrrrrrrr, rrrrrrrrr, 2025-06-26, 333.00, 500.00, 66.60).', 'C:\\xampp\\htdocs\\tempp\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (55, \'13th\', \'rrrrrrrr\', \'rrrrrrrrrr\', \'rrrrrrrrr\', \'2025-06-26\', \'333\', \'500\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (55, \'13th\', \'rrrrrrrr\', \'rrrrrrrrrr\', \'rrrrrrrrr\', \'2025-06-26\', \'333\', \'500\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (55, \'13th\', \'rrrrrrrr\', \'rrrrrrrrrr\', \'rrrrrrrrr\', \'2025-06-26\', \'333\', \'500\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(71): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-25 07:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-25 07:58:26 --> ErrorException: pg_query(): Query failed: ERROR:  new row for relation &quot;qualification_info&quot; violates check constraint &quot;qualification_info_qualification_level_check&quot;
+DETAIL:  Failing row contains (5, 55, 13th, rrrrrrrr, rrrrrrrrrr, rrrrrrrrr, 2025-06-26, 333.00, 500.00, 66.60). in C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "qu...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qu...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qu...')
+#4 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qu...', Array, false)
+#5 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\tempp\app\Models\PersonalModel.php(71): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_i...', Array)
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+#11 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-07-25 07:58:26 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  new row for relation &quot;qualification_info&quot; violates check constraint &quot;qualification_info_qualification_level_check&quot;
+DETAIL:  Failing row contains (5, 55, 13th, rrrrrrrr, rrrrrrrrrr, rrrrrrrrr, 2025-06-26, 333.00, 500.00, 66.60).
+[Method: POST, Route: qualification_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(71): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 07:58:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  new row for relation &quot;qualification_info&quot; violates check constraint &quot;qualification_info_qualification_level_check&quot;
+DETAIL:  Failing row contains (5, 55, 13th, rrrrrrrr, rrrrrrrrrr, rrrrrrrrr, 2025-06-26, 333.00, 500.00, 66.60).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (55, \'13th\', \'rrrrrrrr\', \'rrrrrrrrrr\', \'rrrrrrrrr\', \'2025-06-26\', \'333\', \'500\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (55, \'13th\', \'rrrrrrrr\', \'rrrrrrrrrr\', \'rrrrrrrrr\', \'2025-06-26\', \'333\', \'500\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(71): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 07:58:26 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  new row for relation &quot;qualification_info&quot; violates check constraint &quot;qualification_info_qualification_level_check&quot;
+DETAIL:  Failing row contains (5, 55, 13th, rrrrrrrr, rrrrrrrrrr, rrrrrrrrr, 2025-06-26, 333.00, 500.00, 66.60).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  new row for relation &quot;qualification_info&quot; violates check constraint &quot;qualification_info_qualification_level_check&quot;
+DETAIL:  Failing row contains (5, 55, 13th, rrrrrrrr, rrrrrrrrrr, rrrrrrrrr, 2025-06-26, 333.00, 500.00, 66.60).', 'C:\\xampp\\htdocs\\tempp\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (55, \'13th\', \'rrrrrrrr\', \'rrrrrrrrrr\', \'rrrrrrrrr\', \'2025-06-26\', \'333\', \'500\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (55, \'13th\', \'rrrrrrrr\', \'rrrrrrrrrr\', \'rrrrrrrrr\', \'2025-06-26\', \'333\', \'500\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (55, \'13th\', \'rrrrrrrr\', \'rrrrrrrrrr\', \'rrrrrrrrr\', \'2025-06-26\', \'333\', \'500\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(71): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-25 08:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 08:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 08:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 08:39:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-25 08:39:12 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...ation', 'iiiiiiiiii', 'iiiiiiii', 'iiiiiiiiiiii', '', '332',...
+                                                             ^ in C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "qu...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qu...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qu...')
+#4 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qu...', Array, false)
+#5 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\tempp\app\Models\PersonalModel.php(71): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_i...', Array)
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+#11 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-07-25 08:39:12 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...ation', 'iiiiiiiiii', 'iiiiiiii', 'iiiiiiiiiiii', '', '332',...
+                                                             ^
+[Method: POST, Route: qualification_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(71): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 08:39:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...ation', 'iiiiiiiiii', 'iiiiiiii', 'iiiiiiiiiiii', '', '332',...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (56, \'Post-Graduation\', \'iiiiiiiiii\', \'iiiiiiii\', \'iiiiiiiiiiii\', \'\', \'332\', \'500\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (56, \'Post-Graduation\', \'iiiiiiiiii\', \'iiiiiiii\', \'iiiiiiiiiiii\', \'\', \'332\', \'500\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(71): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 08:39:12 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...ation', 'iiiiiiiiii', 'iiiiiiii', 'iiiiiiiiiiii', '', '332',...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...ation\', \'iiiiiiiiii\', \'iiiiiiii\', \'iiiiiiiiiiii\', \'\', \'332\',...
+                                                             ^', 'C:\\xampp\\htdocs\\tempp\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (56, \'Post-Graduation\', \'iiiiiiiiii\', \'iiiiiiii\', \'iiiiiiiiiiii\', \'\', \'332\', \'500\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (56, \'Post-Graduation\', \'iiiiiiiiii\', \'iiiiiiii\', \'iiiiiiiiiiii\', \'\', \'332\', \'500\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (56, \'Post-Graduation\', \'iiiiiiiiii\', \'iiiiiiii\', \'iiiiiiiiiiii\', \'\', \'332\', \'500\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(71): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-25 08:39:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-25 08:39:26 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...ation', 'iiiiiiiiii', 'iiiiiiii', 'iiiiiiiiiiii', '', '332',...
+                                                             ^ in C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "qu...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qu...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qu...')
+#4 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qu...', Array, false)
+#5 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\tempp\app\Models\PersonalModel.php(71): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_i...', Array)
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+#11 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-07-25 08:39:26 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...ation', 'iiiiiiiiii', 'iiiiiiii', 'iiiiiiiiiiii', '', '332',...
+                                                             ^
+[Method: POST, Route: qualification_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(71): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 08:39:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...ation', 'iiiiiiiiii', 'iiiiiiii', 'iiiiiiiiiiii', '', '332',...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (56, \'Post-Graduation\', \'iiiiiiiiii\', \'iiiiiiii\', \'iiiiiiiiiiii\', \'\', \'332\', \'500\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (56, \'Post-Graduation\', \'iiiiiiiiii\', \'iiiiiiii\', \'iiiiiiiiiiii\', \'\', \'332\', \'500\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(71): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 08:39:26 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...ation', 'iiiiiiiiii', 'iiiiiiii', 'iiiiiiiiiiii', '', '332',...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...ation\', \'iiiiiiiiii\', \'iiiiiiii\', \'iiiiiiiiiiii\', \'\', \'332\',...
+                                                             ^', 'C:\\xampp\\htdocs\\tempp\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (56, \'Post-Graduation\', \'iiiiiiiiii\', \'iiiiiiii\', \'iiiiiiiiiiii\', \'\', \'332\', \'500\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (56, \'Post-Graduation\', \'iiiiiiiiii\', \'iiiiiiii\', \'iiiiiiiiiiii\', \'\', \'332\', \'500\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (56, \'Post-Graduation\', \'iiiiiiiiii\', \'iiiiiiii\', \'iiiiiiiiiiii\', \'\', \'332\', \'500\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(71): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-25 08:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-25 08:44:31 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...ation', 'iiiiiiiiii', 'iiiiiiii', 'iiiiiiiiiiii', '', '332',...
+                                                             ^ in C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "qu...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qu...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qu...')
+#4 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qu...', Array, false)
+#5 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\tempp\app\Models\PersonalModel.php(71): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_i...', Array)
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+#11 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-07-25 08:44:31 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...ation', 'iiiiiiiiii', 'iiiiiiii', 'iiiiiiiiiiii', '', '332',...
+                                                             ^
+[Method: POST, Route: qualification_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(71): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 08:44:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...ation', 'iiiiiiiiii', 'iiiiiiii', 'iiiiiiiiiiii', '', '332',...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (56, \'Post-Graduation\', \'iiiiiiiiii\', \'iiiiiiii\', \'iiiiiiiiiiii\', \'\', \'332\', \'500\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (56, \'Post-Graduation\', \'iiiiiiiiii\', \'iiiiiiii\', \'iiiiiiiiiiii\', \'\', \'332\', \'500\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(71): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 08:44:31 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...ation', 'iiiiiiiiii', 'iiiiiiii', 'iiiiiiiiiiii', '', '332',...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...ation\', \'iiiiiiiiii\', \'iiiiiiii\', \'iiiiiiiiiiii\', \'\', \'332\',...
+                                                             ^', 'C:\\xampp\\htdocs\\tempp\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (56, \'Post-Graduation\', \'iiiiiiiiii\', \'iiiiiiii\', \'iiiiiiiiiiii\', \'\', \'332\', \'500\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (56, \'Post-Graduation\', \'iiiiiiiiii\', \'iiiiiiii\', \'iiiiiiiiiiii\', \'\', \'332\', \'500\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (56, \'Post-Graduation\', \'iiiiiiiiii\', \'iiiiiiii\', \'iiiiiiiiiiii\', \'\', \'332\', \'500\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(71): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-25 08:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 08:48:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 08:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 10:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 10:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 10:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-25 10:14:20 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... 'Post-Graduation', 'kkkkkkk', 'kkkkkkk', 'kkkk', '', '123',...
+                                                             ^ in C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "qu...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qu...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qu...')
+#4 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qu...', Array, false)
+#5 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\tempp\app\Models\PersonalModel.php(82): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_i...', Array)
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+#11 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-07-25 10:14:20 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... 'Post-Graduation', 'kkkkkkk', 'kkkkkkk', 'kkkk', '', '123',...
+                                                             ^
+[Method: POST, Route: qualification_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(82): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 10:14:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... 'Post-Graduation', 'kkkkkkk', 'kkkkkkk', 'kkkk', '', '123',...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (58, \'Post-Graduation\', \'kkkkkkk\', \'kkkkkkk\', \'kkkk\', \'\', \'123\', \'500\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (58, \'Post-Graduation\', \'kkkkkkk\', \'kkkkkkk\', \'kkkk\', \'\', \'123\', \'500\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(82): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 10:14:20 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... 'Post-Graduation', 'kkkkkkk', 'kkkkkkk', 'kkkk', '', '123',...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... \'Post-Graduation\', \'kkkkkkk\', \'kkkkkkk\', \'kkkk\', \'\', \'123\',...
+                                                             ^', 'C:\\xampp\\htdocs\\tempp\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (58, \'Post-Graduation\', \'kkkkkkk\', \'kkkkkkk\', \'kkkk\', \'\', \'123\', \'500\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (58, \'Post-Graduation\', \'kkkkkkk\', \'kkkkkkk\', \'kkkk\', \'\', \'123\', \'500\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (58, \'Post-Graduation\', \'kkkkkkk\', \'kkkkkkk\', \'kkkk\', \'\', \'123\', \'500\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(82): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-25 10:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-25 10:14:28 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... 'Post-Graduation', 'kkkkkkk', 'kkkkkkk', 'kkkk', '', '123',...
+                                                             ^ in C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "qu...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qu...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qu...')
+#4 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qu...', Array, false)
+#5 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\tempp\app\Models\PersonalModel.php(82): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_i...', Array)
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+#11 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-07-25 10:14:28 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... 'Post-Graduation', 'kkkkkkk', 'kkkkkkk', 'kkkk', '', '123',...
+                                                             ^
+[Method: POST, Route: qualification_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(82): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 10:14:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... 'Post-Graduation', 'kkkkkkk', 'kkkkkkk', 'kkkk', '', '123',...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (58, \'Post-Graduation\', \'kkkkkkk\', \'kkkkkkk\', \'kkkk\', \'\', \'123\', \'500\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (58, \'Post-Graduation\', \'kkkkkkk\', \'kkkkkkk\', \'kkkk\', \'\', \'123\', \'500\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(82): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 10:14:28 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... 'Post-Graduation', 'kkkkkkk', 'kkkkkkk', 'kkkk', '', '123',...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... \'Post-Graduation\', \'kkkkkkk\', \'kkkkkkk\', \'kkkk\', \'\', \'123\',...
+                                                             ^', 'C:\\xampp\\htdocs\\tempp\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (58, \'Post-Graduation\', \'kkkkkkk\', \'kkkkkkk\', \'kkkk\', \'\', \'123\', \'500\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (58, \'Post-Graduation\', \'kkkkkkk\', \'kkkkkkk\', \'kkkk\', \'\', \'123\', \'500\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (58, \'Post-Graduation\', \'kkkkkkk\', \'kkkkkkk\', \'kkkk\', \'\', \'123\', \'500\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(82): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-25 10:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-25 10:14:44 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... 'Post-Graduation', 'kkkkkkk', 'kkkkkkk', 'kkkk', '', '123',...
+                                                             ^ in C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\tempp\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "qu...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qu...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qu...')
+#4 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qu...', Array, false)
+#5 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\tempp\app\Models\PersonalModel.php(82): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_i...', Array)
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+#11 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-07-25 10:14:44 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... 'Post-Graduation', 'kkkkkkk', 'kkkkkkk', 'kkkk', '', '123',...
+                                                             ^
+[Method: POST, Route: qualification_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(82): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 10:14:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... 'Post-Graduation', 'kkkkkkk', 'kkkkkkk', 'kkkk', '', '123',...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (58, \'Post-Graduation\', \'kkkkkkk\', \'kkkkkkk\', \'kkkk\', \'\', \'123\', \'500\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (58, \'Post-Graduation\', \'kkkkkkk\', \'kkkkkkk\', \'kkkk\', \'\', \'123\', \'500\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(82): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 10:14:44 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... 'Post-Graduation', 'kkkkkkk', 'kkkkkkk', 'kkkk', '', '123',...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... \'Post-Graduation\', \'kkkkkkk\', \'kkkkkkk\', \'kkkk\', \'\', \'123\',...
+                                                             ^', 'C:\\xampp\\htdocs\\tempp\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (58, \'Post-Graduation\', \'kkkkkkk\', \'kkkkkkk\', \'kkkk\', \'\', \'123\', \'500\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (58, \'Post-Graduation\', \'kkkkkkk\', \'kkkkkkk\', \'kkkk\', \'\', \'123\', \'500\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (58, \'Post-Graduation\', \'kkkkkkk\', \'kkkkkkk\', \'kkkk\', \'\', \'123\', \'500\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "qualification_info" ("personal_info_id", "qualification_level", "institute_name", "board_university", "subjects", "passing_year", "marks_obtained", "total_marks") VALUES (:personal_info_id:, :qualification_level:, :institute_name:, :board_university:, :subjects:, :passing_year:, :marks_obtained:, :total_marks:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(82): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(176): App\Models\PersonalModel->saveData('qualification_info', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->qualification_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-25 10:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 10:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-25 10:16:23 --> ErrorException: Undefined array key "permanent_district"
+[Method: POST, Route: address_details_save]
+in APPPATH\Controllers\RmsController.php on line 214.
+ 1 APPPATH\Controllers\RmsController.php(214): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "permanent_district"', 'C:\\xampp\\htdocs\\tempp\\app\\Controllers\\RmsController.php', 214)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->address_details_save()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-25 10:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-25 10:16:37 --> ErrorException: Undefined array key "permanent_district"
+[Method: POST, Route: address_details_save]
+in APPPATH\Controllers\RmsController.php on line 214.
+ 1 APPPATH\Controllers\RmsController.php(214): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "permanent_district"', 'C:\\xampp\\htdocs\\tempp\\app\\Controllers\\RmsController.php', 214)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->address_details_save()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-25 10:59:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 11:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 11:02:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 11:02:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-25 11:02:38 --> Exception: Table config for 'address_details' is not defined.
+[Method: POST, Route: address_details_save]
+in APPPATH\Models\PersonalModel.php on line 65.
+ 1 APPPATH\Models\PersonalModel.php(74): App\Models\PersonalModel->setTableConfig('address_details')
+ 2 APPPATH\Controllers\RmsController.php(215): App\Models\PersonalModel->saveData('address_details', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->address_details_save()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-07-25 11:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 11:09:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 11:12:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 11:15:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-25 11:15:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

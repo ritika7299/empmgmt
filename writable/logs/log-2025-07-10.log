@@ -1,0 +1,131 @@
+DEBUG - 2025-07-10 05:21:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 05:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 05:22:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 05:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 05:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 05:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 05:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-10 05:57:47 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\tempp\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\tempp\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `em...', 0)
+#1 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `em...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `em...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `em...', Array, false)
+#4 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(61): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->personal_info_save()
+#9 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-07-10 05:57:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: personal_info_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `emp_info` (`firstname`, `middlename`, `lastname`, `fathername`, `mothername`, `gender`, `dob`, `mobile_no`, `email`, `religion`, `created_at`, `updated_at`) VALUES (:firstname:, :middlename:, :lastname:, :fathername:, :mothername:, :gender:, :dob:, :mobile_no:, :email:, :religion:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\RmsController.php(61): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->personal_info_save()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-10 05:57:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `emp_info` (`firstname`, `middlename`, `lastname`, `fathername`, `mothername`, `gender`, `dob`, `mobile_no`, `email`, `religion`, `created_at`, `updated_at`) VALUES (\'ritika\', \'rits\', \'sfsdfs\', \'dvkumar\', \'sunita\', \'on\', \'2025-07-10\', \'9999999999\', \'ffsa@gmail.com\', \'AK\', \'2025-07-10 05:57:47\', \'2025-07-10 05:57:47\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `emp_info` (`firstname`, `middlename`, `lastname`, `fathername`, `mothername`, `gender`, `dob`, `mobile_no`, `email`, `religion`, `created_at`, `updated_at`) VALUES (\'ritika\', \'rits\', \'sfsdfs\', \'dvkumar\', \'sunita\', \'on\', \'2025-07-10\', \'9999999999\', \'ffsa@gmail.com\', \'AK\', \'2025-07-10 05:57:47\', \'2025-07-10 05:57:47\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `emp_info` (`firstname`, `middlename`, `lastname`, `fathername`, `mothername`, `gender`, `dob`, `mobile_no`, `email`, `religion`, `created_at`, `updated_at`) VALUES (:firstname:, :middlename:, :lastname:, :fathername:, :mothername:, :gender:, :dob:, :mobile_no:, :email:, :religion:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\RmsController.php(61): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->personal_info_save()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-10 05:57:47 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `emp_info` (`firstname`, `middlename`, `lastname`, `fathername`, `mothername`, `gender`, `dob`, `mobile_no`, `email`, `religion`, `created_at`, `updated_at`) VALUES (\'ritika\', \'rits\', \'sfsdfs\', \'dvkumar\', \'sunita\', \'on\', \'2025-07-10\', \'9999999999\', \'ffsa@gmail.com\', \'AK\', \'2025-07-10 05:57:47\', \'2025-07-10 05:57:47\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `emp_info` (`firstname`, `middlename`, `lastname`, `fathername`, `mothername`, `gender`, `dob`, `mobile_no`, `email`, `religion`, `created_at`, `updated_at`) VALUES (\'ritika\', \'rits\', \'sfsdfs\', \'dvkumar\', \'sunita\', \'on\', \'2025-07-10\', \'9999999999\', \'ffsa@gmail.com\', \'AK\', \'2025-07-10 05:57:47\', \'2025-07-10 05:57:47\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `emp_info` (`firstname`, `middlename`, `lastname`, `fathername`, `mothername`, `gender`, `dob`, `mobile_no`, `email`, `religion`, `created_at`, `updated_at`) VALUES (\'ritika\', \'rits\', \'sfsdfs\', \'dvkumar\', \'sunita\', \'on\', \'2025-07-10\', \'9999999999\', \'ffsa@gmail.com\', \'AK\', \'2025-07-10 05:57:47\', \'2025-07-10 05:57:47\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `emp_info` (`firstname`, `middlename`, `lastname`, `fathername`, `mothername`, `gender`, `dob`, `mobile_no`, `email`, `religion`, `created_at`, `updated_at`) VALUES (:firstname:, :middlename:, :lastname:, :fathername:, :mothername:, :gender:, :dob:, :mobile_no:, :email:, :religion:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\RmsController.php(61): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->personal_info_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-07-10 05:58:12 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\tempp\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\tempp\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `em...', 0)
+#1 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `em...')
+#2 C:\xampp\htdocs\tempp\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `em...')
+#3 C:\xampp\htdocs\tempp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `em...', Array, false)
+#4 C:\xampp\htdocs\tempp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\tempp\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\tempp\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\tempp\app\Controllers\RmsController.php(61): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\tempp\system\CodeIgniter.php(933): App\Controllers\RmsController->personal_info_save()
+#9 C:\xampp\htdocs\tempp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#10 C:\xampp\htdocs\tempp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\tempp\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\tempp\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\tempp\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-07-10 05:58:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: personal_info_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `emp_info` (`firstname`, `middlename`, `lastname`, `fathername`, `mothername`, `gender`, `dob`, `mobile_no`, `email`, `religion`, `created_at`, `updated_at`) VALUES (:firstname:, :middlename:, :lastname:, :fathername:, :mothername:, :gender:, :dob:, :mobile_no:, :email:, :religion:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\RmsController.php(61): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->personal_info_save()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-10 05:58:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `emp_info` (`firstname`, `middlename`, `lastname`, `fathername`, `mothername`, `gender`, `dob`, `mobile_no`, `email`, `religion`, `created_at`, `updated_at`) VALUES (\'ritika\', \'rits\', \'sfsdfs\', \'dvkumar\', \'sunita\', \'on\', \'2025-07-10\', \'9999999999\', \'ffsa@gmail.com\', \'AK\', \'2025-07-10 05:58:12\', \'2025-07-10 05:58:12\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `emp_info` (`firstname`, `middlename`, `lastname`, `fathername`, `mothername`, `gender`, `dob`, `mobile_no`, `email`, `religion`, `created_at`, `updated_at`) VALUES (\'ritika\', \'rits\', \'sfsdfs\', \'dvkumar\', \'sunita\', \'on\', \'2025-07-10\', \'9999999999\', \'ffsa@gmail.com\', \'AK\', \'2025-07-10 05:58:12\', \'2025-07-10 05:58:12\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `emp_info` (`firstname`, `middlename`, `lastname`, `fathername`, `mothername`, `gender`, `dob`, `mobile_no`, `email`, `religion`, `created_at`, `updated_at`) VALUES (:firstname:, :middlename:, :lastname:, :fathername:, :mothername:, :gender:, :dob:, :mobile_no:, :email:, :religion:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\RmsController.php(61): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->personal_info_save()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-10 05:58:12 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `emp_info` (`firstname`, `middlename`, `lastname`, `fathername`, `mothername`, `gender`, `dob`, `mobile_no`, `email`, `religion`, `created_at`, `updated_at`) VALUES (\'ritika\', \'rits\', \'sfsdfs\', \'dvkumar\', \'sunita\', \'on\', \'2025-07-10\', \'9999999999\', \'ffsa@gmail.com\', \'AK\', \'2025-07-10 05:58:12\', \'2025-07-10 05:58:12\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `emp_info` (`firstname`, `middlename`, `lastname`, `fathername`, `mothername`, `gender`, `dob`, `mobile_no`, `email`, `religion`, `created_at`, `updated_at`) VALUES (\'ritika\', \'rits\', \'sfsdfs\', \'dvkumar\', \'sunita\', \'on\', \'2025-07-10\', \'9999999999\', \'ffsa@gmail.com\', \'AK\', \'2025-07-10 05:58:12\', \'2025-07-10 05:58:12\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `emp_info` (`firstname`, `middlename`, `lastname`, `fathername`, `mothername`, `gender`, `dob`, `mobile_no`, `email`, `religion`, `created_at`, `updated_at`) VALUES (\'ritika\', \'rits\', \'sfsdfs\', \'dvkumar\', \'sunita\', \'on\', \'2025-07-10\', \'9999999999\', \'ffsa@gmail.com\', \'AK\', \'2025-07-10 05:58:12\', \'2025-07-10 05:58:12\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `emp_info` (`firstname`, `middlename`, `lastname`, `fathername`, `mothername`, `gender`, `dob`, `mobile_no`, `email`, `religion`, `created_at`, `updated_at`) VALUES (:firstname:, :middlename:, :lastname:, :fathername:, :mothername:, :gender:, :dob:, :mobile_no:, :email:, :religion:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\RmsController.php(61): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->personal_info_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
