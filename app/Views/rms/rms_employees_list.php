@@ -230,7 +230,7 @@
                                   >
                                     Join Department
                                   </th>
-                                  <th
+                                  <!-- <th
                                     class="text-center sorting_disabled"
                                     rowspan="1"
                                     colspan="1"
@@ -238,19 +238,19 @@
                                     style="width: 10%"
                                   >
                                     Actions
-                                  </th>
+                                  </th> -->
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr role="row" class="odd">
                                   <td class="sorting_1"><a href="javascript::void(0);"
                                               >100</a></td>
-                                  <td><a href="javascript::void(0);"
-                                              >Ritika</a></td>
+                                  <td>
+                                    Ritika</td>
                                   <td>XYZ</td>
                                   <td>19-07-2025</td>
                                   <td>Department one</td>
-                                  <td class="text-center">
+                                  <!-- <td class="text-center">
                                     <div class="list-icons">
                                       <div class="dropdown">
                                         <a
@@ -280,18 +280,17 @@
                                         </div>
                                       </div>
                                     </div>
-                                  </td>
+                                  </td> -->
                                 </tr>
                                 <tr role="row" class="even">
                                   <td class="sorting_1"><a href="javascript::void(0);"
                                               >101</a></td>
                                   <td class="">
-                                    <a href="javascript::void(0);"
-                                              >Ritika</a></td>
+                                              Ritika</td>
                                   <td class="">XYZ</td>
                                   <td>19-07-2025</td>
                                   <td>Department one</td>
-                                  <td class="text-center">
+                                  <!-- <td class="text-center">
                                     <div class="list-icons">
                                       <div class="dropdown">
                                         <a
@@ -322,7 +321,7 @@
                                         </div>
                                       </div>
                                     </div>
-                                  </td>
+                                  </td> -->
                                 </tr>
                               </tbody>
                             </table>
@@ -462,12 +461,8 @@
                                         </select>
                                       </div>
                                     </div>
-
-
-                  </div>
-                  
-                  <!-- /modal-body -->
-                  
+                                </div>  
+                  <!-- /modal-body -->                  
                 <div class="modal-footer">
                   <!-- <button
                     type="button"

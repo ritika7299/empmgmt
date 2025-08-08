@@ -4,12 +4,10 @@ use App\Models\PersonalModel;
 class RmsController extends BaseController
 {
     protected $personalModel;
-   
-    public function __construct()
+       public function __construct()
     {
     $this->personalModel = new PersonalModel();
     }
-
 // view employee list
 public function employees_list()
 {
@@ -141,7 +139,6 @@ public function qualification_details_save()
 {
     $session = session();
     $personalInfoId = $session->get('personal_info_id');
-
     if (!$personalInfoId) {
         return $this->response->setJSON([
             'success' => false,
@@ -151,7 +148,6 @@ public function qualification_details_save()
     if (!isset($this->personalModel)) {
         $this->personalModel = new \App\Models\PersonalModel();
     }
-    // Get posted array data
     $qualificationLevels  = $this->request->getPost('qualification_level');
     $institutes           = $this->request->getPost('institute_name');
     $boards               = $this->request->getPost('board_university');
@@ -481,241 +477,50 @@ public function joining_details_save()
     ]);
 }
 // save upload details
-/*public function upload_details_save()
-{
-    $session = session();
-    $personalInfoId = $session->get('personal_info_id');
-
-    if (!$personalInfoId) {
-        return redirect()->back()->with('error', 'Session expired. Please fill personal info first.');
-    }
-
-    $rules = [
-        'photo_path' => 'uploaded[photo_path]|is_image[photo_path]|max_size[photo_path,2048]',
-        'document_path' => 'uploaded[document_path]|ext_in[document_path,pdf,doc,docx]|max_size[document_path,5120]',
-    ];
-
-    if (!$this->validate($rules)) {
-        return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-    }
-
-    $photo = $this->request->getFile('photo_path');
-    $document = $this->request->getFile('document_path');
-
-    if (!$photo->isValid()) {
-        return redirect()->back()->withInput()->with('error', 'Photo upload failed: ' . $photo->getErrorString());
-    }
-
-    if (!$document->isValid()) {
-        return redirect()->back()->withInput()->with('error', 'Document upload failed: ' . $document->getErrorString());
-    }
-
-    $uploadPath = FCPATH . 'uploaded/';
-    if (!is_dir($uploadPath)) {
-        mkdir($uploadPath, 0755, true);
-    }
-
-    $photoName = $photo->getRandomName();
-    $docName = $document->getRandomName();
-
-    //Log or show actual error if move fails
-    if (!$photo->move($uploadPath, $photoName)) {
-        log_message('error', 'Photo Move Error: ' . $photo->getErrorString());
-        return redirect()->back()->withInput()->with('error', 'Failed to move uploaded photo: ' . $photo->getErrorString());
-    }
-
-    if (!$document->move($uploadPath, $docName)) {
-        log_message('error', 'Document Move Error: ' . $document->getErrorString());
-        return redirect()->back()->withInput()->with('error', 'Failed to move uploaded document: ' . $document->getErrorString());
-    }
-
-    $model = new \App\Models\PersonalModel();
-    $model->saveData('upload_info', [
-        'personal_info_id' => $personalInfoId,
-        'photo_path' => "uploaded/$photoName",
-        'document_path' => "uploaded/$docName",
-    ]);
-
-    //Redirect to list page with success message
-    return redirect()->to('/employeeslist')->with('success', 'Files uploaded successfully.');
-}*/
-/*public function upload_details_save()
-{
-    $session = session();
-    $personalInfoId = $session->get('personal_info_id');
-    if (!$personalInfoId) {
-        return redirect()->back()->with('error', 'Session expired. Please fill personal info first.');
-    }
-    $rules = [
-        'photo_path' => 'uploaded[photo_path]|is_image[photo_path]|max_size[photo_path,2048]',
-        'document_path' => 'uploaded[document_path]|ext_in[document_path,pdf,doc,docx]|max_size[document_path,5120]',
-    ];
-    if (!$this->validate($rules)) {
-        return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-    }
-    $photo = $this->request->getFile('photo_path');
-    $document = $this->request->getFile('document_path');
-    if (!$photo->isValid() || !$document->isValid()) {
-        return redirect()->back()->withInput()->with('error', 'File upload failed.');
-    }
-    $uploadPath = FCPATH . 'uploaded/';
-    if (!is_dir($uploadPath)) {
-        mkdir($uploadPath, 0755, true);
-    }
-    $date = date('d-m-Y');
-    // Unique filename generator
-    $getUniqueFileName = function($path, $prefix, $date, $ext) {
-        $i = 1;
-        do {
-            $name = "{$prefix}_{$date}_" . str_pad($i, 3, '0', STR_PAD_LEFT) . ".{$ext}";
-            $i++;
-        } while (file_exists($path . $name));
-        return $name;
-    };
-    $photoExt = $photo->getClientExtension();
-    $docExt = $document->getClientExtension();
-    $photoName = $getUniqueFileName($uploadPath, 'photo', $date, $photoExt);
-    $docName = $getUniqueFileName($uploadPath, 'document', $date, $docExt);
-    if (!$photo->move($uploadPath, $photoName) || !$document->move($uploadPath, $docName)) {
-        return redirect()->back()->withInput()->with('error', 'Failed to move uploaded files.');
-    }
-    $model = new \App\Models\PersonalModel();
-    $model->saveData('upload_info', [
-        'personal_info_id' => $personalInfoId,
-        'photo_path' => "uploaded/$photoName",
-        'document_path' => "uploaded/$docName",
-    ]);
-    return redirect()->to('/employeeslist')->with('success', 'Form submitted successfully.');
-}*/
-/*public function upload_details_save()
-{
-    $session = session();
-    $personalInfoId = $session->get('personal_info_id');
-    if (!$personalInfoId) {
-        return redirect()->back()->with('error', 'Session expired. Please fill personal info first.');
-    }
-    $rules = [
-        'photo_path' => 'uploaded[photo_path]|is_image[photo_path]|max_size[photo_path,2048]',
-        'document_path' => 'uploaded[document_path]|ext_in[document_path,pdf,doc,docx]|max_size[document_path,5120]',
-    ];
-    if (!$this->validate($rules)) {
-        return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-    }
-    $photo = $this->request->getFile('photo_path');
-    $document = $this->request->getFile('document_path');
-    if (!$photo->isValid() || !$document->isValid()) {
-        return redirect()->back()->withInput()->with('error', 'File upload failed.');
-    }
-    $date = date('d-m-Y');
-    // Path like uploaded/101/
-    $uploadPath = FCPATH . "uploaded/{$personalInfoId}/";
-    if (!is_dir($uploadPath)) {
-        mkdir($uploadPath, 0755, true); // Recursively create directory
-    }
-    // Unique filename generator
-    $getUniqueFileName = function($path, $prefix, $date, $ext) {
-        $i = 1;
-        do {
-            $name = "{$prefix}_{$date}_" . str_pad($i, 3, '0', STR_PAD_LEFT) . ".{$ext}";
-            $i++;
-        } while (file_exists($path . $name));
-        return $name;
-    };
-    $photoExt = $photo->getClientExtension();
-    $docExt = $document->getClientExtension();
-    $photoName = $getUniqueFileName($uploadPath, 'photo', $date, $photoExt);
-    $docName = $getUniqueFileName($uploadPath, 'document', $date, $docExt);
-    if (!$photo->move($uploadPath, $photoName) || !$document->move($uploadPath, $docName)) {
-        return redirect()->back()->withInput()->with('error', 'Failed to move uploaded files.');
-    }
-    $model = new \App\Models\PersonalModel();
-    $model->saveData('upload_info', [
-        'personal_info_id' => $personalInfoId,
-        'photo_path' => "uploaded/{$personalInfoId}/$photoName",
-        'document_path' => "uploaded/{$personalInfoId}/$docName",
-    ]);
-    return redirect()->to('/employeeslist')->with('success', 'Form submitted successfully.');
-}*/
-
-
 public function upload_details_save()
 {
     $session = session();
     $personalInfoId = $session->get('personal_info_id');
-
     if (!$personalInfoId) {
         return redirect()->back()->with('error', 'Session expired. Please fill personal info first.');
     }
-
     $rules = [
         'photo_path' => 'uploaded[photo_path]|is_image[photo_path]|max_size[photo_path,2048]',
         'document_path' => 'uploaded[document_path]|ext_in[document_path,pdf,doc,docx]|max_size[document_path,5120]',
     ];
-
     if (!$this->validate($rules)) {
         return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
     }
-
     $photo = $this->request->getFile('photo_path');
     $document = $this->request->getFile('document_path');
-
     if (!$photo->isValid() || !$document->isValid()) {
-        return redirect()->back()->withInput()->with('error', 'File upload failed.');
+        return redirect()->back()->withInput()->with('error', 'One or both files are invalid.');
     }
-
-    $date = date('d-m-Y');
-
-    //Make sure base "uploaded/" folder exists
-    $baseUploadPath = FCPATH . 'uploaded/';
-    if (!is_dir($baseUploadPath)) {
-        if (!mkdir($baseUploadPath, 0755, true)) {
-            return redirect()->back()->with('error', 'Failed to create base upload folder.');
-        }
-    }
-
-    // Now create personal folder like uploaded/101/
-    $uploadPath = $baseUploadPath . $personalInfoId . '/';
+    $uploadPath = FCPATH . 'uploaded/' . $personalInfoId . '/';
     if (!is_dir($uploadPath)) {
-        if (!mkdir($uploadPath, 0755, true)) {
-            return redirect()->back()->with('error', 'Failed to create personal folder: ' . $uploadPath);
+    if (!mkdir($uploadPath, 0777, true)) {
+            return redirect()->back()->with('error', 'Failed to create folder: ' . $uploadPath);
         }
     }
-
-    // Unique filename generator
-    $getUniqueFileName = function($path, $prefix, $date, $ext) {
-        $i = 1;
-        do {
-            $name = "{$prefix}_{$date}_" . str_pad($i, 3, '0', STR_PAD_LEFT) . ".{$ext}";
-            $i++;
-        } while (file_exists($path . $name));
-        return $name;
-    };
-
-    $photoExt = $photo->getClientExtension();
-    $docExt = $document->getClientExtension();
-
-    $photoName = $getUniqueFileName($uploadPath, 'photo', $date, $photoExt);
-    $docName = $getUniqueFileName($uploadPath, 'document', $date, $docExt);
-
-    // Move files
-    if (!$photo->move($uploadPath, $photoName)) {
-        return redirect()->back()->withInput()->with('error', 'Failed to upload photo file.');
+    $date = date('d-m-Y');
+    $photoName = 'photo_' . $date . '_' . uniqid() . '.' . $photo->getClientExtension();
+    $docName = 'document_' . $date . '_' . uniqid() . '.' . $document->getClientExtension();
+    try {
+        $photo->move($uploadPath, $photoName);
+        $document->move($uploadPath, $docName);
+    } catch (\Exception $e) {
+        return redirect()->back()->with('error', 'File move failed: ' . $e->getMessage());
     }
-
-    if (!$document->move($uploadPath, $docName)) {
-        return redirect()->back()->withInput()->with('error', 'Failed to upload document file.');
-    }
-
-    // Save data to database
     $model = new \App\Models\PersonalModel();
     $model->saveData('upload_info', [
         'personal_info_id' => $personalInfoId,
-        'photo_path' => "uploaded/{$personalInfoId}/$photoName",
-        'document_path' => "uploaded/{$personalInfoId}/$docName",
+        'photo_path' => 'uploaded/' . $personalInfoId . '/' . $photoName,
+        'document_path' => 'uploaded/' . $personalInfoId . '/' . $docName,
     ]);
-
-    return redirect()->to('/employeeslist')->with('success', 'Form submitted successfully.');
+    return redirect()->to('/employeeslist')->with('success', 'Files uploaded successfully.');
 }
+public function emp_profile_view()
+{
 
-
+}
 }

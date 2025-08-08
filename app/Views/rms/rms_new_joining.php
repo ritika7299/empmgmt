@@ -2,7 +2,7 @@
 <?= $this->section('content') ?>
 <!-- content-wrapper -->
      <div class="content-wrapper">       
-             <div class="page-header page-header-light">
+        <div class="page-header page-header-light">
           <div class="page-header-content header-elements-md-inline">
             <div class="page-title d-flex">
               <h4>
@@ -2125,7 +2125,6 @@
                               </div>
                             </div>
                            </div>
-
                            <div class="tab-pane fade" id="solid-rounded-tab10">
                              <div class="card">
                               <div
@@ -2200,4 +2199,5 @@
     </div>
 <!-- /content-wrapper -->
 <script src="<?= base_url('public/assets/js/emp_forms.js') ?>"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <?= $this->endSection() ?>
