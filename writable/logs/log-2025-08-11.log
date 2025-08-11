@@ -1,0 +1,285 @@
+DEBUG - 2025-08-11 05:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:20:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:40:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:40:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:40:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:42:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:43:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:44:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:44:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:56:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:58:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:59:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 05:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:08:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:09:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:10:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-11 06:10:56 --> ErrorException: pg_query(): Query failed: ERROR:  new row for relation &quot;emergency_info&quot; violates check constraint &quot;emergency_info_contact_no_check&quot;
+DETAIL:  Failing row contains (51, 135, (&quot;Devin Nolan&quot;,&quot;Scarlet Russo&quot;), (&quot;Velit iste architec&quot;,&quot;Architecto dolores i&quot;), Ut aperiam, null, null, 2025-08-11 11:40:56.96039, null, null, null, yes). in C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "em...')
+#2 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "em...')
+#3 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "em...')
+#4 C:\xampp\htdocs\empmgmt\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "em...', Array, false)
+#5 C:\xampp\htdocs\empmgmt\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\empmgmt\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\empmgmt\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\empmgmt\app\Models\PersonalModel.php(138): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\empmgmt\app\Controllers\RmsController.php(377): App\Models\PersonalModel->saveData('emergency_info', Array)
+#10 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(933): App\Controllers\RmsController->emergency_details_save()
+#11 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\empmgmt\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\empmgmt\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\empmgmt\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-08-11 06:10:57 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  new row for relation &quot;emergency_info&quot; violates check constraint &quot;emergency_info_contact_no_check&quot;
+DETAIL:  Failing row contains (51, 135, (&quot;Devin Nolan&quot;,&quot;Scarlet Russo&quot;), (&quot;Velit iste architec&quot;,&quot;Architecto dolores i&quot;), Ut aperiam, null, null, 2025-08-11 11:40:56.96039, null, null, null, yes).
+[Method: POST, Route: emergency_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (:personal_info_id:, :name:, :relation:, :contact_no:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(138): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(377): App\Models\PersonalModel->saveData('emergency_info', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emergency_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-11 06:10:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  new row for relation &quot;emergency_info&quot; violates check constraint &quot;emergency_info_contact_no_check&quot;
+DETAIL:  Failing row contains (51, 135, (&quot;Devin Nolan&quot;,&quot;Scarlet Russo&quot;), (&quot;Velit iste architec&quot;,&quot;Architecto dolores i&quot;), Ut aperiam, null, null, 2025-08-11 11:40:56.96039, null, null, null, yes).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (135, (\'Devin Nolan\',\'Scarlet Russo\'), (\'Velit iste architec\',\'Architecto dolores i\'), (\'Ut aperiam\'))')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (135, (\'Devin Nolan\',\'Scarlet Russo\'), (\'Velit iste architec\',\'Architecto dolores i\'), (\'Ut aperiam\'))')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (:personal_info_id:, :name:, :relation:, :contact_no:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(138): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(377): App\Models\PersonalModel->saveData('emergency_info', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emergency_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-11 06:10:57 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  new row for relation &quot;emergency_info&quot; violates check constraint &quot;emergency_info_contact_no_check&quot;
+DETAIL:  Failing row contains (51, 135, (&quot;Devin Nolan&quot;,&quot;Scarlet Russo&quot;), (&quot;Velit iste architec&quot;,&quot;Architecto dolores i&quot;), Ut aperiam, null, null, 2025-08-11 11:40:56.96039, null, null, null, yes).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  new row for relation &quot;emergency_info&quot; violates check constraint &quot;emergency_info_contact_no_check&quot;
+DETAIL:  Failing row contains (51, 135, (&quot;Devin Nolan&quot;,&quot;Scarlet Russo&quot;), (&quot;Velit iste architec&quot;,&quot;Architecto dolores i&quot;), Ut aperiam, null, null, 2025-08-11 11:40:56.96039, null, null, null, yes).', 'C:\\xampp\\htdocs\\empmgmt\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (135, (\'Devin Nolan\',\'Scarlet Russo\'), (\'Velit iste architec\',\'Architecto dolores i\'), (\'Ut aperiam\'))')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (135, (\'Devin Nolan\',\'Scarlet Russo\'), (\'Velit iste architec\',\'Architecto dolores i\'), (\'Ut aperiam\'))')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (135, (\'Devin Nolan\',\'Scarlet Russo\'), (\'Velit iste architec\',\'Architecto dolores i\'), (\'Ut aperiam\'))')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (:personal_info_id:, :name:, :relation:, :contact_no:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(138): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(377): App\Models\PersonalModel->saveData('emergency_info', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emergency_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-11 06:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-11 06:11:05 --> ErrorException: pg_query(): Query failed: ERROR:  new row for relation &quot;emergency_info&quot; violates check constraint &quot;emergency_info_contact_no_check&quot;
+DETAIL:  Failing row contains (52, 135, (&quot;Devin Nolan&quot;,&quot;Scarlet Russo&quot;), (&quot;Velit iste architec&quot;,&quot;Architecto dolores i&quot;), Ut aperiam, null, null, 2025-08-11 11:41:05.48425, null, null, null, yes). in C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "em...')
+#2 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "em...')
+#3 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "em...')
+#4 C:\xampp\htdocs\empmgmt\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "em...', Array, false)
+#5 C:\xampp\htdocs\empmgmt\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\empmgmt\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\empmgmt\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\empmgmt\app\Models\PersonalModel.php(138): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\empmgmt\app\Controllers\RmsController.php(377): App\Models\PersonalModel->saveData('emergency_info', Array)
+#10 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(933): App\Controllers\RmsController->emergency_details_save()
+#11 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\empmgmt\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\empmgmt\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\empmgmt\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-08-11 06:11:05 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  new row for relation &quot;emergency_info&quot; violates check constraint &quot;emergency_info_contact_no_check&quot;
+DETAIL:  Failing row contains (52, 135, (&quot;Devin Nolan&quot;,&quot;Scarlet Russo&quot;), (&quot;Velit iste architec&quot;,&quot;Architecto dolores i&quot;), Ut aperiam, null, null, 2025-08-11 11:41:05.48425, null, null, null, yes).
+[Method: POST, Route: emergency_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (:personal_info_id:, :name:, :relation:, :contact_no:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(138): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(377): App\Models\PersonalModel->saveData('emergency_info', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emergency_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-11 06:11:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  new row for relation &quot;emergency_info&quot; violates check constraint &quot;emergency_info_contact_no_check&quot;
+DETAIL:  Failing row contains (52, 135, (&quot;Devin Nolan&quot;,&quot;Scarlet Russo&quot;), (&quot;Velit iste architec&quot;,&quot;Architecto dolores i&quot;), Ut aperiam, null, null, 2025-08-11 11:41:05.48425, null, null, null, yes).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (135, (\'Devin Nolan\',\'Scarlet Russo\'), (\'Velit iste architec\',\'Architecto dolores i\'), (\'Ut aperiam\'))')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (135, (\'Devin Nolan\',\'Scarlet Russo\'), (\'Velit iste architec\',\'Architecto dolores i\'), (\'Ut aperiam\'))')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (:personal_info_id:, :name:, :relation:, :contact_no:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(138): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(377): App\Models\PersonalModel->saveData('emergency_info', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emergency_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-11 06:11:05 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  new row for relation &quot;emergency_info&quot; violates check constraint &quot;emergency_info_contact_no_check&quot;
+DETAIL:  Failing row contains (52, 135, (&quot;Devin Nolan&quot;,&quot;Scarlet Russo&quot;), (&quot;Velit iste architec&quot;,&quot;Architecto dolores i&quot;), Ut aperiam, null, null, 2025-08-11 11:41:05.48425, null, null, null, yes).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  new row for relation &quot;emergency_info&quot; violates check constraint &quot;emergency_info_contact_no_check&quot;
+DETAIL:  Failing row contains (52, 135, (&quot;Devin Nolan&quot;,&quot;Scarlet Russo&quot;), (&quot;Velit iste architec&quot;,&quot;Architecto dolores i&quot;), Ut aperiam, null, null, 2025-08-11 11:41:05.48425, null, null, null, yes).', 'C:\\xampp\\htdocs\\empmgmt\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (135, (\'Devin Nolan\',\'Scarlet Russo\'), (\'Velit iste architec\',\'Architecto dolores i\'), (\'Ut aperiam\'))')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (135, (\'Devin Nolan\',\'Scarlet Russo\'), (\'Velit iste architec\',\'Architecto dolores i\'), (\'Ut aperiam\'))')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (135, (\'Devin Nolan\',\'Scarlet Russo\'), (\'Velit iste architec\',\'Architecto dolores i\'), (\'Ut aperiam\'))')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (:personal_info_id:, :name:, :relation:, :contact_no:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(138): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(377): App\Models\PersonalModel->saveData('emergency_info', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emergency_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-11 06:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:11:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:12:06 --> Step 1: Session personal_info_id = 135
+DEBUG - 2025-08-11 06:12:06 --> Step 2: Photo file = CodeIgniter\HTTP\Files\UploadedFile Object
+(
+    [size:protected] => 107617
+    [originalMimeType:protected] => image/jpeg
+    [path:protected] => C:\xampp\tmp\php14DF.tmp
+    [clientPath:protected] => demo1.jpeg
+    [originalName:protected] => demo1.jpeg
+    [name:protected] => demo1.jpeg
+    [error:protected] => 0
+    [hasMoved:protected] => 
+    [pathName:SplFileInfo:private] => C:\xampp\tmp\php14DF.tmp
+    [fileName:SplFileInfo:private] => php14DF.tmp
+)
+
+DEBUG - 2025-08-11 06:12:06 --> Step 3: Document file = CodeIgniter\HTTP\Files\UploadedFile Object
+(
+    [size:protected] => 13264
+    [originalMimeType:protected] => application/pdf
+    [path:protected] => C:\xampp\tmp\php14E0.tmp
+    [clientPath:protected] => aaaaa.pdf
+    [originalName:protected] => aaaaa.pdf
+    [name:protected] => aaaaa.pdf
+    [error:protected] => 0
+    [hasMoved:protected] => 
+    [pathName:SplFileInfo:private] => C:\xampp\tmp\php14E0.tmp
+    [fileName:SplFileInfo:private] => php14E0.tmp
+)
+
+DEBUG - 2025-08-11 06:12:06 --> Step 4: Upload path = C:\xampp\htdocs\empmgmt\uploaded/135/
+DEBUG - 2025-08-11 06:12:06 --> Step 5: Folder created successfully.
+DEBUG - 2025-08-11 06:12:06 --> Step 6: Files moved successfully.
+DEBUG - 2025-08-11 06:12:06 --> Step 7: Database save complete.
+DEBUG - 2025-08-11 06:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:17:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:19:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:19:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:19:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 06:20:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 08:31:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 08:31:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 08:31:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 08:31:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 08:31:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 08:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 08:40:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 08:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:20:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:31:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:31:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:55:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:56:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:56:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:57:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 09:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:01:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:02:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:17:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:18:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:18:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:18:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:19:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:19:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:26:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:26:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:28:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:29:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-11 10:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

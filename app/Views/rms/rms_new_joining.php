@@ -2005,7 +2005,26 @@
                                             Central Delhi
                                           </option>
                                         </select>
-                                      </div>
+                                      </div>                                   
+                                    </div>
+
+                                     <div class="form-group row">
+                                      <label class="col-form-label col-lg-3"
+                                        >Date of Joining
+                                        <span class="text-danger"
+                                          >*</span
+                                        ></label
+                                      >
+                                      <div class="col-lg-9">
+                                        <input
+                                            type="date"
+                                            class="form-control datepicker hasDatepicker"
+                                            placeholder="dd/mm/yyyy"
+                                            name="date_of_joining"
+                                            id="date_of_joining"
+                                            required
+                                          />
+                                      </div>                                  
                                     </div>
                                   </fieldset>
                                   <div

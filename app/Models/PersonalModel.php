@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 use CodeIgniter\Model;
 class PersonalModel extends Model
@@ -22,9 +21,11 @@ class PersonalModel extends Model
             'primaryKey' => 'id',
             'allowedFields' => [
                 'personal_info_id', 'aadhar', 'panno', 'voterid', 
-                'passport', 'other'
+                'passport', 'other','entry_emp','entry_ip','modify_emp','modify_ip'
             ],
-             'timestamps' => false,
+             'timestamps' => true,
+               'createdField' => 'entry_date',
+                'updatedField' => 'modify_date',
              'foreignKeys' => [
             'personal_info_id' => 'personal_info(personal_info_id)'
             ]
@@ -34,9 +35,12 @@ class PersonalModel extends Model
         'allowedFields' => [
             'personal_info_id', 'qualification_level', 'institute_name',
             'board_university', 'subjects', 'passing_year',
-            'marks_obtained', 'total_marks'
+            'marks_obtained', 'total_marks',
+            'entry_emp','entry_ip','modify_emp','modify_ip'
             ],
-        'timestamps' => false,
+        'timestamps' => true,
+          'createdField' => 'entry_date',
+                'updatedField' => 'modify_date',
         'foreignKeys' => [
         'personal_info_id' => 'personal_info(personal_info_id)'
         ]
@@ -46,17 +50,23 @@ class PersonalModel extends Model
             'allowedFields' => [
                 'personal_info_id', 'permanent_address','permanent_state',
                 'permanent_district', 'permanent_pin', 'present_address', 
-                'present_state', 'present_district', 'present_pin','same_as_permanent'
+                'present_state', 'present_district', 'present_pin','same_as_permanent',
+                'entry_emp','entry_ip','modify_emp','modify_ip'
             ],
-            'timestamps' => false,
+            'timestamps' => true,
+              'createdField' => 'entry_date',
+                'updatedField' => 'modify_date',
             'foreignKeys' => [
             'personal_info_id' => 'personal_info(personal_info_id)'
             ]
             ],
             'family_info' => [
             'primaryKey' => 'id',
-            'allowedFields' => [ 'personal_info_id', 'name','relation','dob', 'is_nominee'],
-            'timestamps' => false,
+            'allowedFields' => [ 'personal_info_id', 'name','relation','dob', 'is_nominee',
+            'entry_emp','entry_ip','modify_emp','modify_ip'],
+            'timestamps' => true,
+              'createdField' => 'entry_date',
+                'updatedField' => 'modify_date',
             'foreignKeys' => [
             'personal_info_id' => 'personal_info(personal_info_id)'
             ]
@@ -65,9 +75,12 @@ class PersonalModel extends Model
             'primaryKey' => 'id',
             'allowedFields' => [
             'personal_info_id', 'bank_name', 'bank_address',
-            'branch_name', 'bank_account_no', 'bank_ifsc'
+            'branch_name', 'bank_account_no', 'bank_ifsc',
+            'entry_emp','entry_ip','modify_emp','modify_ip'
             ],
-            'timestamps' => false,
+            'timestamps' => true,
+              'createdField' => 'entry_date',
+                'updatedField' => 'modify_date',
             'foreignKeys' => [
             'personal_info_id' => 'personal_info(personal_info_id)'
              ]
@@ -75,10 +88,12 @@ class PersonalModel extends Model
             'emergency_info' => [
             'primaryKey' => 'id',
             'allowedFields' => [
-            'personal_info_id', 'name', 'relation',
-            'contact_no'
+            'personal_info_id', 'name', 'relation', 'contact_no',
+            'entry_emp','entry_ip','modify_emp','modify_ip'
             ],
-            'timestamps' => false,
+            'timestamps' => true,
+              'createdField' => 'entry_date',
+                'updatedField' => 'modify_date',
             'foreignKeys' => [
             'personal_info_id' => 'personal_info(personal_info_id)'
              ]
@@ -86,9 +101,12 @@ class PersonalModel extends Model
             'joining_info' => [
             'primaryKey' => 'id',
             'allowedFields' => [
-            'personal_info_id', 'department', 'designation', 'state', 'district'
+            'personal_info_id', 'department', 'designation', 'state', 'district', 
+            'date_of_joining','entry_emp','entry_ip','modify_emp','modify_ip'
             ],
-            'timestamps' => false,
+            'timestamps' => true,
+              'createdField' => 'entry_date',
+                'updatedField' => 'modify_date',
             'foreignKeys' => [
             'personal_info_id' => 'personal_info(personal_info_id)'
              ]
@@ -96,9 +114,12 @@ class PersonalModel extends Model
             'compliance_info' => [
             'primaryKey' => 'id',
             'allowedFields' => [
-            'personal_info_id', 'esic_no', 'uan_no', 'medical_card_no', 'any_other'
+            'personal_info_id', 'esic_no', 'uan_no', 'medical_card_no', 'any_other',
+            'entry_emp', 'entry_ip','modify_emp','modify_ip'
             ],
-            'timestamps' => false,
+            'timestamps' => true,
+              'createdField' => 'entry_date',
+                'updatedField' => 'modify_date',
             'foreignKeys' => [
             'personal_info_id' => 'personal_info(personal_info_id)'
              ]
@@ -106,8 +127,8 @@ class PersonalModel extends Model
             'upload_info' => [
             'primaryKey' => 'id',
             'allowedFields' => [
-            'personal_info_id', 'photo_path', 'document_path'
-            ],
+            'personal_info_id', 'photo_path', 'document_path',
+                 ],
             'timestamps' => false,
             'foreignKeys' => [
             'personal_info_id' => 'personal_info(personal_info_id)'

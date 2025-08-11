@@ -387,7 +387,6 @@ public function joining_details_save()
 {
     $session = session();
     $personalInfoId = $session->get('personal_info_id');
-
     if (!$personalInfoId) {
         return $this->response->setJSON([
             'success' => false,
@@ -403,8 +402,8 @@ public function joining_details_save()
         'designation' => 'required',
         'state' => 'required',
         'district' => 'required',
+        'date_of_joining'=> 'required'
     ];
-
     if (!$this->validate($rules)) {
         return $this->response->setJSON([
             'success' => false,
@@ -418,6 +417,7 @@ public function joining_details_save()
         'designation' => $data['designation'],
         'state' => $data['state'],
         'district' =>$data['district'],
+        'date_of_joining'=>$data['date_of_joining']
     ];
         // Save to appropriate table
     $lastId = $this->personalModel->saveData('joining_info', $insertData);
@@ -427,9 +427,8 @@ public function joining_details_save()
         'id' => $lastId
     ]);
     }
-
     //save compliance details
-    public function compliance_details_save()
+public function compliance_details_save()
 {
     $session = session();
     $personalInfoId = $session->get('personal_info_id');
@@ -519,8 +518,11 @@ public function upload_details_save()
     ]);
     return redirect()->to('/employeeslist')->with('success', 'Files uploaded successfully.');
 }
+
 public function emp_profile_view()
 {
-
+$data['title'] = 'RMS- Employee Profile';
+return view('rms/rms_view_emp_profile', $data);
 }
+
 }
