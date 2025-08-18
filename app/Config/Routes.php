@@ -15,7 +15,6 @@ $routes->get('/logout', 'AuthController::logout');
 $routes->get('/employeeslist', 'RmsController::employees_list');
 $routes->get('/incomp_employeeslist', 'RmsController::incomplete_employees_list');
 $routes->get('/new_emp_joining', 'RmsController::new_joining');
-// $routes->match(['get', 'post'], '/new_emp_joining', 'RmsController::new_joining');
 $routes->match(['GET'], '/new_emp_joining', 'RmsController::new_joining');
 $routes->post('/personal_info_save', 'RmsController::personal_info_save');
 $routes->post('/identification_details_save', 'RmsController::identification_details_save');
