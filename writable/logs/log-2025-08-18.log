@@ -1,0 +1,316 @@
+DEBUG - 2025-08-18 04:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 05:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 05:02:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 05:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 05:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-18 08:48:28 --> ErrorException: Undefined variable $form
+[Method: GET, Route: incomp_employeeslist]
+in APPPATH\Views\rms\rms_incomplete_emp_list.php on line 169.
+ 1 APPPATH\Views\rms\rms_incomplete_emp_list.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $form', 'C:\\xampp\\htdocs\\empmgmt\\app\\Views\\rms\\rms_incomplete_emp_list.php', 169)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\empmgmt\\app\\Views\\rms\\rms_incomplete_emp_list.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('rms/rms_incomplete_emp_list', [], true)
+ 5 APPPATH\Controllers\RmsController.php(27): view('rms/rms_incomplete_emp_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->incomplete_employees_list()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-18 08:48:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 08:56:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 08:56:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 08:56:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 08:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 08:57:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 08:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 08:58:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 08:59:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 08:59:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-18 09:21:36 --> ArgumentCountError: Too few arguments to function App\Controllers\RmsController::emp_profile_view(), 0 passed in C:\xampp\htdocs\empmgmt\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: emp_profile_view]
+in APPPATH\Controllers\RmsController.php on line 529.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-18 09:22:06 --> ArgumentCountError: Too few arguments to function App\Controllers\RmsController::emp_profile_view(), 0 passed in C:\xampp\htdocs\empmgmt\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: emp_profile_view]
+in APPPATH\Controllers\RmsController.php on line 529.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-18 09:22:33 --> ArgumentCountError: Too few arguments to function App\Controllers\RmsController::emp_profile_view(), 0 passed in C:\xampp\htdocs\empmgmt\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: emp_profile_view]
+in APPPATH\Controllers\RmsController.php on line 529.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-18 09:22:33 --> ArgumentCountError: Too few arguments to function App\Controllers\RmsController::emp_profile_view(), 0 passed in C:\xampp\htdocs\empmgmt\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: emp_profile_view]
+in APPPATH\Controllers\RmsController.php on line 529.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-18 09:23:21 --> ArgumentCountError: Too few arguments to function App\Controllers\RmsController::emp_profile_view(), 0 passed in C:\xampp\htdocs\empmgmt\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: emp_profile_view]
+in APPPATH\Controllers\RmsController.php on line 529.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-18 09:23:23 --> ArgumentCountError: Too few arguments to function App\Controllers\RmsController::emp_profile_view(), 0 passed in C:\xampp\htdocs\empmgmt\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: emp_profile_view]
+in APPPATH\Controllers\RmsController.php on line 529.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-18 09:23:46 --> ArgumentCountError: Too few arguments to function App\Controllers\RmsController::emp_profile_view(), 0 passed in C:\xampp\htdocs\empmgmt\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: emp_profile_view]
+in APPPATH\Controllers\RmsController.php on line 529.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-18 09:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-18 09:30:18 --> ErrorException: Undefined variable $employee
+[Method: GET, Route: employeeslist]
+in APPPATH\Views\rms\rms_employees_list.php on line 154.
+ 1 APPPATH\Views\rms\rms_employees_list.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $employee', 'C:\\xampp\\htdocs\\empmgmt\\app\\Views\\rms\\rms_employees_list.php', 154)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\empmgmt\\app\\Views\\rms\\rms_employees_list.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('rms/rms_employees_list', [], true)
+ 5 APPPATH\Controllers\RmsController.php(19): view('rms/rms_employees_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->employees_list()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-18 09:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-18 09:30:22 --> ErrorException: Undefined variable $employee
+[Method: GET, Route: employeeslist]
+in APPPATH\Views\rms\rms_employees_list.php on line 154.
+ 1 APPPATH\Views\rms\rms_employees_list.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $employee', 'C:\\xampp\\htdocs\\empmgmt\\app\\Views\\rms\\rms_employees_list.php', 154)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\empmgmt\\app\\Views\\rms\\rms_employees_list.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('rms/rms_employees_list', [], true)
+ 5 APPPATH\Controllers\RmsController.php(19): view('rms/rms_employees_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->employees_list()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-18 09:31:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-18 09:31:18 --> ErrorException: Attempt to read property "personal_info_id" on array
+[Method: GET, Route: employeeslist]
+in APPPATH\Views\rms\rms_employees_list.php on line 154.
+ 1 APPPATH\Views\rms\rms_employees_list.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "personal_info_id" on array', 'C:\\xampp\\htdocs\\empmgmt\\app\\Views\\rms\\rms_employees_list.php', 154)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\empmgmt\\app\\Views\\rms\\rms_employees_list.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('rms/rms_employees_list', [], true)
+ 5 APPPATH\Controllers\RmsController.php(19): view('rms/rms_employees_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->employees_list()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-18 09:31:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-18 09:31:20 --> ErrorException: Attempt to read property "personal_info_id" on array
+[Method: GET, Route: employeeslist]
+in APPPATH\Views\rms\rms_employees_list.php on line 154.
+ 1 APPPATH\Views\rms\rms_employees_list.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "personal_info_id" on array', 'C:\\xampp\\htdocs\\empmgmt\\app\\Views\\rms\\rms_employees_list.php', 154)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\empmgmt\\app\\Views\\rms\\rms_employees_list.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('rms/rms_employees_list', [], true)
+ 5 APPPATH\Controllers\RmsController.php(19): view('rms/rms_employees_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->employees_list()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-18 09:34:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-18 09:34:13 --> ErrorException: Undefined array key "personal_info_id"
+[Method: GET, Route: employeeslist]
+in APPPATH\Views\rms\rms_employees_list.php on line 154.
+ 1 APPPATH\Views\rms\rms_employees_list.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "personal_info_id"', 'C:\\xampp\\htdocs\\empmgmt\\app\\Views\\rms\\rms_employees_list.php', 154)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\empmgmt\\app\\Views\\rms\\rms_employees_list.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('rms/rms_employees_list', [], true)
+ 5 APPPATH\Controllers\RmsController.php(19): view('rms/rms_employees_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->employees_list()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-18 09:36:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:37:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:37:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:39:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:39:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:39:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:39:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:39:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:40:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-18 09:41:04 --> ErrorException: pg_query(): Query failed: ERROR:  new row for relation &quot;emergency_info&quot; violates check constraint &quot;emergency_info_contact_no_check&quot;
+DETAIL:  Failing row contains (56, 140, Alfonso Hamilton, Veritatis fugit et , Doloremque, null, null, 2025-08-18 15:11:04.91444, null, null, null, yes). in C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "em...')
+#2 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "em...')
+#3 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "em...')
+#4 C:\xampp\htdocs\empmgmt\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "em...', Array, false)
+#5 C:\xampp\htdocs\empmgmt\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\empmgmt\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\empmgmt\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\empmgmt\app\Models\PersonalModel.php(239): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\empmgmt\app\Controllers\RmsController.php(380): App\Models\PersonalModel->saveData('emergency_info', Array)
+#10 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(933): App\Controllers\RmsController->emergency_details_save()
+#11 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#12 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\empmgmt\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\empmgmt\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\empmgmt\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-08-18 09:41:04 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  new row for relation &quot;emergency_info&quot; violates check constraint &quot;emergency_info_contact_no_check&quot;
+DETAIL:  Failing row contains (56, 140, Alfonso Hamilton, Veritatis fugit et , Doloremque, null, null, 2025-08-18 15:11:04.91444, null, null, null, yes).
+[Method: POST, Route: emergency_details_save]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (:personal_info_id:, :name:, :relation:, :contact_no:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\PersonalModel.php(239): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\RmsController.php(380): App\Models\PersonalModel->saveData('emergency_info', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emergency_details_save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-18 09:41:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  new row for relation &quot;emergency_info&quot; violates check constraint &quot;emergency_info_contact_no_check&quot;
+DETAIL:  Failing row contains (56, 140, Alfonso Hamilton, Veritatis fugit et , Doloremque, null, null, 2025-08-18 15:11:04.91444, null, null, null, yes).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (140, (\'Alfonso Hamilton\'), (\'Veritatis fugit et \'), (\'Doloremque\'))')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (140, (\'Alfonso Hamilton\'), (\'Veritatis fugit et \'), (\'Doloremque\'))')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (:personal_info_id:, :name:, :relation:, :contact_no:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\PersonalModel.php(239): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\RmsController.php(380): App\Models\PersonalModel->saveData('emergency_info', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emergency_details_save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-18 09:41:04 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  new row for relation &quot;emergency_info&quot; violates check constraint &quot;emergency_info_contact_no_check&quot;
+DETAIL:  Failing row contains (56, 140, Alfonso Hamilton, Veritatis fugit et , Doloremque, null, null, 2025-08-18 15:11:04.91444, null, null, null, yes).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  new row for relation &quot;emergency_info&quot; violates check constraint &quot;emergency_info_contact_no_check&quot;
+DETAIL:  Failing row contains (56, 140, Alfonso Hamilton, Veritatis fugit et , Doloremque, null, null, 2025-08-18 15:11:04.91444, null, null, null, yes).', 'C:\\xampp\\htdocs\\empmgmt\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (140, (\'Alfonso Hamilton\'), (\'Veritatis fugit et \'), (\'Doloremque\'))')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (140, (\'Alfonso Hamilton\'), (\'Veritatis fugit et \'), (\'Doloremque\'))')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (140, (\'Alfonso Hamilton\'), (\'Veritatis fugit et \'), (\'Doloremque\'))')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "emergency_info" ("personal_info_id", "name", "relation", "contact_no") VALUES (:personal_info_id:, :name:, :relation:, :contact_no:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\PersonalModel.php(239): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\RmsController.php(380): App\Models\PersonalModel->saveData('emergency_info', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emergency_details_save()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-18 09:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:41:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:41:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 09:41:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:09:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:09:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:13:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:14:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:15:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:15:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:15:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:15:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:17:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:29:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-18 10:29:12 --> ErrorException: Undefined variable $form
+[Method: GET, Route: incomp_employeeslist]
+in APPPATH\Views\rms\rms_incomplete_emp_list.php on line 169.
+ 1 APPPATH\Views\rms\rms_incomplete_emp_list.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $form', 'C:\\xampp\\htdocs\\empmgmt\\app\\Views\\rms\\rms_incomplete_emp_list.php', 169)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\empmgmt\\app\\Views\\rms\\rms_incomplete_emp_list.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('rms/rms_incomplete_emp_list', [], true)
+ 5 APPPATH\Controllers\RmsController.php(27): view('rms/rms_incomplete_emp_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->incomplete_employees_list()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-18 10:29:16 --> ErrorException: Undefined variable $form
+[Method: GET, Route: incomp_employeeslist]
+in APPPATH\Views\rms\rms_incomplete_emp_list.php on line 169.
+ 1 APPPATH\Views\rms\rms_incomplete_emp_list.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $form', 'C:\\xampp\\htdocs\\empmgmt\\app\\Views\\rms\\rms_incomplete_emp_list.php', 169)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\empmgmt\\app\\Views\\rms\\rms_incomplete_emp_list.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('rms/rms_incomplete_emp_list', [], true)
+ 5 APPPATH\Controllers\RmsController.php(27): view('rms/rms_incomplete_emp_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->incomplete_employees_list()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-18 10:30:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:31:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:31:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-18 10:31:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

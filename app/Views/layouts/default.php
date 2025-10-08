@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <base href="<?php echo base_url(); ?>" />
     <meta charset="utf-8" />
@@ -52,11 +53,12 @@
     <script src="<?= base_url('public/assets/js/emp_forms.js') ?>"></script>
     <!-- <script src="<?//= base_url('public/assets/global_assets/js/demo_pages/multiple_form_validation.js') ?>"></script> -->
 </head>
+
 <body class="sidebar-xs sidebar-component-hidden">
     <div class="navbar navbar-expand-md navbar-dark bg-indigo navbar-static">
         <div class="navbar-brand">
             <a href="javascript::void(0);" class="d-inline-block">
-                <img src="<?= base_url('global_assets/images/logo_light.png') ?>" alt="" />
+                <img src="<?= base_url('public/assets/global_assets/images/logo_light.png') ?>" alt="" />
             </a>
         </div>
         <div class="d-md-none">
@@ -156,4 +158,5 @@
     $('.alert').delay(4000).fadeOut();
     $('.tbl-filter').DataTable();
 </script>
+
 </html>
