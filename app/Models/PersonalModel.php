@@ -3,6 +3,12 @@ namespace App\Models;
 use CodeIgniter\Model;
 class PersonalModel extends Model
 {
+    public function __construct()
+    {
+        parent::__construct();
+        $this->db = \Config\Database::connect();
+    }
+
     protected $table;          // Table name set dynamic  
     protected $primaryKey;     // Primary key set dynamic
     protected $allowedFields;  // Allowed fields set dynamic
@@ -215,6 +221,8 @@ class PersonalModel extends Model
         ],
         // add more tables here.....
     ];
+
+
     // Table setup function
     protected function setTableConfig(string $tableName)
     {
@@ -240,7 +248,7 @@ class PersonalModel extends Model
             return $this->getInsertID();
         }
     }
-
+    //get employee personal details
     public function getEmployeeWithDetails()
     {
         return $this->db->table('personal_info e')
@@ -250,27 +258,71 @@ class PersonalModel extends Model
             ->get()
             ->getResult();
     }
-
-    public function getEmployeeViewDetails($personalInfoId)
+    // get employee all details 
+    public function getEmployeeDetails($personalInfoId)
     {
-        return $this->db->table('personal_info emp')
-            ->select('emp.*, job.designation, job.department, salary.salary, salary.bank_account')
-            ->join('job_info job', 'job.personal_info_id = emp.personal_info_id', 'left')
-            ->join('salary_info salary', 'salary.personal_info_id = emp.personal_info_id', 'left')
-            ->where('emp.personal_info_id', $personalInfoId)
+        // Master Table
+        $personal = $this->db->table('personal_info')
+            ->where('personal_info_id', $personalInfoId)
             ->get()
-            ->getRow(); // For single record
+            ->getRowArray();
+
+        if (!$personal) {
+            return null; // Agar record hi nahi mila
+        }
+        // Related Tables (foreign key = personal_info_id)
+        $identity = $this->db->table('iden_details')->where('personal_info_id', $personalInfoId)->get()->getResultArray();
+        $qualification = $this->db->table('qualification_info')->where('personal_info_id', $personalInfoId)->get()->getResultArray();
+        $address = $this->db->table('address_info')->where('personal_info_id', $personalInfoId)->get()->getResultArray();
+        $family = $this->db->table('family_info')->where('personal_info_id', $personalInfoId)->get()->getResultArray();
+        $accounts = $this->db->table('accounts_info')->where('personal_info_id', $personalInfoId)->get()->getResultArray();
+        $emergency = $this->db->table('emergency_info')->where('personal_info_id', $personalInfoId)->get()->getResultArray();
+        $joining = $this->db->table('joining_info')->where('personal_info_id', $personalInfoId)->get()->getResultArray();
+        $compliance = $this->db->table('compliance_info')->where('personal_info_id', $personalInfoId)->get()->getResultArray();
+        $uploads = $this->db->table('upload_info')->where('personal_info_id', $personalInfoId)->get()->getResultArray();
+        // Return structured data
+        return [
+            'personal' => $personal,
+            'qualification' => $qualification,
+            'address' => $address,
+            'identity' => $identity,
+            'family' => $family,
+            'accounts' => $accounts,
+            'emergency' => $emergency,
+            'joining' => $joining,
+            'compliance' => $compliance,
+            'uploads' => $uploads
+        ];
     }
-
-
-
-    /*public function getEmployeeEditDetails()
+    // fetch emergency contact info
+    public function getEmergencyContacts($personalInfoId)
     {
-        return $this->db->table('personal_info e')
-            ->select()
+        return $this->db->table('emergency_info')
+            ->select('name, relation, contact_no')
+            ->where('personal_info_id', $personalInfoId)
+            ->where('isactive', true)
             ->get()
-            ->getResult();
-    }*/
+
+            ->getResultArray(); // returns an array of contacts
+    }
+    //feth qualification info
+    public function getQualifications($personalInfoId)
+    {
+        return $this->db->table('qualification_info')
+            ->select('qualification_level, board_university, passing_year')
+            ->where('personal_info_id', $personalInfoId)
+            ->orderBy('id', 'ASC')
+            ->get()
+            ->getResultArray();
+    }
+    //fetch family details 
+    public function getFamilyDetails($personalInfoId)
+    {
+        return $this->db->table('family_info')
+            ->where('personal_info_id', $personalInfoId)
+            ->get()
+            ->getResultArray();
+    }
 }
 
 

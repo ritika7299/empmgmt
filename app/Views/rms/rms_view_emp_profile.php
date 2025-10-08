@@ -13,14 +13,12 @@
         <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
       </div>
     </div>
-
     <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
       <div class="d-flex">
         <div class="breadcrumb">
           <a href="<?= base_url('/dashboard') ?>" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Dashboard</a>
           <span class="breadcrumb-item active">Employee List</span>
         </div>
-
         <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
       </div>
     </div>
@@ -48,43 +46,68 @@
                       alt=""
                     />
                   </a> -->
-            <div class="mb-2">
+            <!-- <div class="mb-2">
               <h4 class="font-weight-semibold text-success mb-0 mt-1">EMP ID: 20012025141</h4>
+            </div> -->
+            <div class="mb-2">
+              <?php
+              $birthYear = date('Y', strtotime($employee['personal']['dob']));
+              $doj = date('Y', strtotime($employee['joining'][0]['date_of_joining']));
+              $empId = $birthYear . $doj . $employee['personal']['personal_info_id'];
+              ?>
+              <h4 class="font-weight-semibold text-success mb-0 mt-1">
+                EMP ID: <?= $empId ?>
+              </h4>
             </div>
             <div class="py-1 table-striped">
-              <div class="d-sm-flex flex-sm-wrap mb-3 mr-3 ml-3 ">
+              <!-- Full Name -->
+              <div class="d-sm-flex flex-sm-wrap mb-3 mr-3 ml-3">
                 <div class="font-weight-semibold"><b>Full name:</b></div>
-                <div class="ml-sm-auto mt-2 mt-sm-0">Hanna Dorman</div>
+                <div class="ml-sm-auto mt-2 mt-sm-0 text-capitalize">
+                  <?= esc($employee['personal']['firstname'] . ' ' . $employee['personal']['lastname']) ?>
+                </div>
               </div>
+              <!-- Father's Name -->
               <div class="d-sm-flex flex-sm-wrap mb-3 mr-3 ml-3">
                 <div class="font-weight-semibold"><b>Father's name:</b></div>
-                <div class="ml-sm-auto mt-2 mt-sm-0">Joe Dorman</div>
+                <div class="ml-sm-auto mt-2 mt-sm-0 text-capitalize">
+                  <?= esc($employee['personal']['fathername'] ?? '-') ?>
+                </div>
               </div>
+              <!-- Mother's Name -->
               <div class="d-sm-flex flex-sm-wrap mb-3 mr-3 ml-3">
                 <div class="font-weight-semibold"><b>Mother's name:</b></div>
-                <div class="ml-sm-auto mt-2 mt-sm-0">Sofie Dorman</div>
+                <div class="ml-sm-auto mt-2 mt-sm-0 text-capitalize">
+                  <?= esc($employee['personal']['mothername'] ?? '-') ?>
+                </div>
               </div>
+              <!-- Marital Status -->
               <div class="d-sm-flex flex-sm-wrap mb-3 mr-3 ml-3">
-                <div class="font-weight-semibold"><b>Martial Status:</b></div>
-                <div class="ml-sm-auto mt-2 mt-sm-0">Unmarried</div>
+                <div class="font-weight-semibold"><b>Marital Status:</b></div>
+                <div class="ml-sm-auto mt-2 mt-sm-0 text-capitalize">
+                  <?= esc($employee['personal']['martialstatus'] ?? '-') ?>
+                </div>
               </div>
-              <div class="d-sm-flex flex-sm-wrap mb-3 mr-3 ml-3">
-                <div class="font-weight-semibold"><b>Spouse's name:</b></div>
-                <div class="ml-sm-auto mt-2 mt-sm-0">-NA-</div>
-              </div>
+              <!-- Date of Birth -->
               <div class="d-sm-flex flex-sm-wrap mb-3 mr-3 ml-3">
                 <div class="font-weight-semibold"><b>Date of Birth:</b></div>
-                <div class="ml-sm-auto mt-2 mt-sm-0">05-05-2000</div>
+                <div class="ml-sm-auto mt-2 mt-sm-0">
+                  <?= date('d-m-Y', strtotime($employee['personal']['dob'])) ?>
+                </div>
               </div>
+              <!-- Mobile No -->
               <div class="d-sm-flex flex-sm-wrap mb-3 mr-3 ml-3">
                 <div class="font-weight-semibold"><b>Mobile No:</b></div>
                 <div class="ml-sm-auto mt-2 mt-sm-0">
-                  +91 6666666666
+                  <?= esc($employee['personal']['mobile_no']) ?>
                 </div>
               </div>
+              <!-- Email -->
               <div class="d-sm-flex flex-sm-wrap mb-3 mr-3 ml-3">
                 <div class="font-weight-semibold"><b>Email:</b></div>
-                <div class="ml-sm-auto mt-2 mt-sm-0">abc@gmail.com</div>
+                <div class="ml-sm-auto mt-2 mt-sm-0">
+                  <?= esc($employee['personal']['email']) ?>
+                </div>
               </div>
             </div>
           </div>
@@ -95,17 +118,6 @@
           <div class="row">
             <div class="col-md-12">
               <div class="card">
-                <!-- <div class="card-header header-elements-inline bg-blue-600">
-                  <h5 class="card-title font-weight-bolder">
-                    Employee All Informations
-                  </h5>
-                  <div class="">
-                    <a href="#" class="btn bg-white btn-sm float-right">
-                      Edit</a>
-                    <a href="#" class="btn bg-white btn-sm float-right ml-2">
-                      Exits</a>
-                  </div>
-                </div> -->
                 <div class="card-header bg-blue-600 header-elements-inline"
                   style="padding-top: 10px; padding-bottom: 10px">
                   <h5 class="card-title">Employee All Informations</h5>
@@ -116,7 +128,7 @@
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end"
                       style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(428px, 39px, 0px);">
-                      <a href="javascript::void(0);" data-toggle="modal" data-target="#modal_objection"
+                      <a href="javascript::void(0);" data-toggle="modal" data-target="#modal_default"
                         class="dropdown-item"><i class="icon-square-left"></i>Exits</a>
                       <a href="javascript::void(0);" class="dropdown-item"><i class="icon-printer4"></i> Edit
                       </a>
@@ -138,23 +150,36 @@
                             <th style="width: 30%">
                               <b>Aadhaar Number</b>
                             </th>
-                            <td>12121212121</td>
+                            <td>
+                              <div class="text-capitalize"><?= esc($employee['identity'][0]['aadhar'] ?? '-NA-') ?>
+                              </div>
+                            </td>
                           </tr>
                           <tr>
                             <th><b>PAN Number</b></th>
-                            <td>JNHVR89</td>
+                            <td>
+                              <div class="text-capitalize"><?= esc($employee['identity'][0]['panno'] ?? '-NA-') ?></div>
+                            </td>
                           </tr>
                           <tr>
                             <th><b>Voter ID</b></th>
-                            <td>EHNCOY86767</td>
+                            <td>
+                              <div class="text-capitalize"><?= esc($employee['identity'][0]['voterid'] ?? '-NA-') ?>
+                              </div>
+                            </td>
                           </tr>
                           <tr>
                             <th><b>Passport</b></th>
-                            <td>UAHARO</td>
+                            <td>
+                              <div class="text-capitalize"><?= esc($employee['identity'][0]['passport'] ?? '-NA-') ?>
+                              </div>
+                            </td>
                           </tr>
                           <tr>
                             <th><b>Any Other</b></th>
-                            <td>-NA-</td>
+                            <td>
+                              <div class="text-capitalize"><?= esc($employee['identity'][0]['other'] ?? '-NA-') ?></div>
+                            </td>
                           </tr>
                         </table>
                       </div>
@@ -171,62 +196,132 @@
                               <b>Permanent Address</b>
                             </th>
                             <td>
-                              Hno. 85 Ghaziabad, Uttar Pardesh, 201009
+                              <div class="text-capitalize">
+                                <?= esc($employee['address'][0]['permanent_address'] ?? '-NA-') ?>,
+                                <?= esc($employee['address'][0]['permanent_district'] ?? '') ?>,
+                                <?= esc($employee['address'][0]['permanent_state'] ?? '') ?>,
+                                <?= esc($employee['address'][0]['permanent_pin'] ?? '') ?>
+                              </div>
                             </td>
                           </tr>
                           <tr>
                             <th><b>Present Address</b></th>
                             <td>
-                              Hno. 85 Ghaziabad, Uttar Pardesh, 201009
+                              <div class="text-capitalize">
+                                <?= esc($employee['address'][0]['present_address'] ?? '-NA-') ?>,
+                                <?= esc($employee['address'][0]['present_district'] ?? '') ?>,
+                                <?= esc($employee['address'][0]['present_state'] ?? '') ?>,
+                                <?= esc($employee['address'][0]['present_pin'] ?? '') ?>
+                              </div>
                             </td>
                           </tr>
                         </table>
                       </div>
                       <!-- family details -->
+                      <?php
+                      $father = null;
+                      $mother = null;
+                      $spouse = null;
+                      $nomineeRelation = '';
+                      $children = [];
+                      foreach ($employee['family'] as $member) {
+                        $relation = $member['relation'];        // Original case
+                        $relationLower = strtolower($relation); // Lowercase for checks
+                        // Assign parents/spouse
+                        if (in_array($relation, ['Father', 'Mother', 'Spouse'])) {
+                          if ($relation === 'Father')
+                            $father = $member;
+                          if ($relation === 'Mother')
+                            $mother = $member;
+                          if ($employee['personal']['martialstatus'] == 'Married') {
+                            $spouse = $member;
+                          }
+                          // else {
+                          //   print_r('sfasjk'); still is not perfect 
+                          // }
+                          // if ($relation === 'Spouse')
+                          //   $spouse = $member;
+                          // Check if nominee (handle boolean or int 1, 't' etc.)
+                          if (!empty($member['is_nominee']) && ($member['is_nominee'] === true || $member['is_nominee'] == 1 || $member['is_nominee'] === 't')) {
+                            $nomineeRelation = strtolower($relation); // Store in lowercase for consistent comparison
+                          }
+                        }
+                        // Collect children (son or daughter, case-insensitive)
+                        elseif (in_array($relationLower, ['son', 'daughter'])) {
+                          $children[] = $member;
+                        }
+                      }
+                      ?>
                       <div class="table-responsive mt-3">
                         <table class="table table-striped table-bordered table-hover">
                           <tr>
-                            <th class="text-danger-700" colspan="4">
-                              Family Details
-                            </th>
+                            <th class="text-danger-700" colspan="4">Family Details</th>
                           </tr>
                           <tr>
-                            <th style="width: 30%" colspan="3">
-                              <b>Father's Name</b>
-                            </th>
-                            <td>ABC Kumar</td>
+                            <th colspan="3"><b>Father's Name</b></th>
+                            <td>
+                              <?= esc($father['name'] ?? '') ?>
+                              <?= $nomineeRelation === 'father' ? '<strong>(Nominee)</strong>' : '' ?>
+                            </td>
                           </tr>
                           <tr>
                             <th colspan="3"><b>Mother's Name</b></th>
-                            <td>XYZ <strong>Nominee</strong></td>
+                            <td>
+                              <?= esc($mother['name'] ?? '') ?>
+                              <?= $nomineeRelation === 'mother' ? '<strong>(Nominee)</strong>' : '' ?>
+                            </td>
                           </tr>
-                          <tr>
+                          <!-- <tr>
                             <th colspan="3"><b>Spouse Name</b></th>
-                            <td>-NA-</td>
+                            <td>
+                              <?//= esc($spouse['name'] ?? '') ?>
+                              <?//= $nomineeRelation === 'spouse' ? '<strong>(Nominee)</strong>' : '' ?>
+                            </td>
+                          </tr> -->
+                          <?php if (!empty($spouse['name'])): ?>
+                            <tr>
+                              <th colspan="3"><b>Spouse Name</b></th>
+                              <td>
+                                <?= esc($spouse['name']) ?>
+                                <?= $nomineeRelation === 'spouse' ? '<strong>(Nominee)</strong>' : '' ?>
+                              </td>
+                            </tr>
+                          <?php endif; ?>
+
+                          <tr>
+                            <th colspan="4" class="text-center"><b>Children Details</b></th>
                           </tr>
                           <tr>
-                            <th colspan="4" class="text-center">
-                              <b>Children Details</b>
-                            </th>
-                          </tr>
-                          <tr>
-                            <th style="width: 30%"><b>Name</b></th>
+                            <th><b>Name</b></th>
                             <th><b>Age</b></th>
                             <th><b>Relation</b></th>
-                            <th colspan="3"><b>DOB</b></th>
+                            <th><b>DOB</b></th>
                           </tr>
-                          <tr>
-                            <td>Child One</td>
-                            <td>5</td>
-                            <td>Daughter</td>
-                            <td colspan="3">1-2-2020</td>
-                          </tr>
-                          <tr>
-                            <td>Child Two</td>
-                            <td>3</td>
-                            <td>Son</td>
-                            <td colspan="3">1-2-2023</td>
-                          </tr>
+
+                          <?php if (!empty($children)): ?>
+                            <?php foreach ($children as $child): ?>
+                              <tr>
+                                <td><?= esc($child['name']) ?></td>
+                                <td>
+                                  <?php
+                                  if (!empty($child['dob'])) {
+                                    $dob = new DateTime($child['dob']);
+                                    $age = (new DateTime())->diff($dob)->y;
+                                    echo $age;
+                                  } else {
+                                    echo 'N/A';
+                                  }
+                                  ?>
+                                </td>
+                                <td><?= esc($child['relation']) ?></td>
+                                <td><?= !empty($child['dob']) ? date('d-m-Y', strtotime($child['dob'])) : 'N/A' ?></td>
+                              </tr>
+                            <?php endforeach; ?>
+                          <?php else: ?>
+                            <tr>
+                              <td colspan="4" class="text-center">No children details available.</td>
+                            </tr>
+                          <?php endif; ?>
                         </table>
                       </div>
                       <!-- joining details -->
@@ -241,45 +336,37 @@
                             <th style="width: 30%">
                               <b>Department Name</b>
                             </th>
-                            <td>dfsf</td>
+                            <td>
+                              <div class="text-capitalize"><?= esc($employee['joining'][0]['department'] ?? '-NA-') ?>
+                              </div>
+                            </td>
                           </tr>
                           <tr>
                             <th><b>Designation Name</b></th>
-                            <td>daffds</td>
+                            <td>
+                              <div class="text-capitalize"><?= esc($employee['joining'][0]['designation'] ?? '-NA-') ?>
+                              </div>
+                            </td>
                           </tr>
                           <tr>
                             <th><b>Date of Joining</b></th>
-                            <td>dfsf</td>
+                            <td>
+                              <div class="text-capitalize">
+                                <?php
+                                $doj = $employee['joining'][0]['date_of_joining'] ?? null;
+                                echo !empty($doj) ? esc(date('d-m-Y', strtotime($doj))) : '-NA-';
+                                ?>
+                                <!-- 25-08-2025 -->
+                              </div>
+                            </td>
                           </tr>
                           <tr>
                             <th><b>District and State</b></th>
-                            <td>dfsf, UP</td>
-                          </tr>
-                        </table>
-                      </div>
-                      <!-- compliance details -->
-                      <div class="table-responsive mt-3">
-                        <table class="table table-striped table-bordered table-hover">
-                          <tr>
-                            <th class="text-danger-700" colspan="3">
-                              Compliance Details
-                            </th>
-                          </tr>
-                          <tr>
-                            <th style="width: 30%"><b>ESIC No.</b></th>
-                            <td>dfsf</td>
-                          </tr>
-                          <tr>
-                            <th><b>UAN No.</b></th>
-                            <td>daffds</td>
-                          </tr>
-                          <tr>
-                            <th><b>Medical Claim Card No.</b></th>
-                            <td>dfsf</td>
-                          </tr>
-                          <tr>
-                            <th><b>Any Other</b></th>
-                            <td>-NA-</td>
+                            <td>
+                              <div class="text-capitalize">
+                                <?= esc($employee['joining'][0]['district'] . ', ' . $employee['joining'][0]['state'] ?? '-NA-') ?>
+                              </div>
+                            </td>
                           </tr>
                         </table>
                       </div>
@@ -289,70 +376,31 @@
                       <div class="table-responsive">
                         <table class="table table-striped table-bordered table-hover">
                           <tr>
-                            <th class="text-danger-700" colspan="3">
-                              Qualification Details
-                            </th>
+                            <th class="text-danger-700" colspan="3">Qualification Details</th>
                           </tr>
                           <tr>
-                            <th style="width: 35%" class="text-dark-800">
-                              <b>Matriculation (10th)</b>
-                            </th>
+                            <th style="width: 35%" class="text-dark-800"><b>Education Qualification</b></th>
                             <th><b>Board/University</b></th>
                             <th><b>Passing Year</b></th>
                           </tr>
-                          <tr>
-                            <td></td>
-                            <td>CBSE</td>
-                            <td>2016</td>
-                          </tr>
-                          <tr>
-                            <th style="width: 35%" class="text-dark-800">
-                              <b>Intermediate (12th)</b>
-                            </th>
-                            <th><b>Board/University</b></th>
-                            <th><b>Passing Year</b></th>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td>CBSE</td>
-                            <td>2016</td>
-                          </tr>
-                          <tr>
-                            <th style="width: 35%" class="text-dark-800">
-                              <b>Graduation</b>
-                            </th>
-                            <th><b>Board/University</b></th>
-                            <th><b>Passing Year</b></th>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td>IGNOU</td>
-                            <td>2016</td>
-                          </tr>
-                          <tr>
-                            <th style="width: 35%" class="text-dark-800">
-                              <b>Post Graduation</b>
-                            </th>
-                            <th><b>Board/University</b></th>
-                            <th><b>Passing Year</b></th>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td>IGNOU</td>
-                            <td>2016</td>
-                          </tr>
-                          <tr>
-                            <th style="width: 35%" class="text-dark-800">
-                              <b>Certificate Course</b>
-                            </th>
-                            <th><b>Board/University</b></th>
-                            <th><b>Passing Year</b></th>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td>IGNOU</td>
-                            <td>2016</td>
-                          </tr>
+                          <?php if (!empty($employee['qualifications'])): ?>
+                            <?php foreach ($employee['qualifications'] as $qualification): ?>
+                              <tr>
+                                <td>
+                                  <div class="text-uppercase"><?= esc($qualification['qualification_level']) ?></div>
+                                </td>
+                                <td>
+                                  <div class="text-uppercase"><?= esc($qualification['board_university']) ?></div>
+                                </td>
+                                <!-- <td><?//= esc($qualification['passing_year']) ?></td> -->
+                                <td><?= date('d-m-Y', strtotime(esc($qualification['passing_year']))) ?></td>
+                              </tr>
+                            <?php endforeach; ?>
+                          <?php else: ?>
+                            <tr>
+                              <td colspan="3">No qualification details found.</td>
+                            </tr>
+                          <?php endif; ?>
                         </table>
                       </div>
                       <!-- account details -->
@@ -365,44 +413,103 @@
                           </tr>
                           <tr>
                             <th style="width: 40%"><b>Bank Name</b></th>
-                            <td>ABC BANK</td>
+                            <td>
+                              <div class="text-capitalize"><?= esc($employee['accounts'][0]['bank_name'] ?? '-NA-') ?>
+                              </div>
+                            </td>
                           </tr>
                           <tr>
                             <th><b>Bank A/C No.</b></th>
-                            <td>1487682365555</td>
+                            <td>
+                              <div class="text-capitalize">
+                                <?= esc($employee['accounts'][0]['bank_account_no'] ?? '-NA-') ?>
+                              </div>
+                            </td>
                           </tr>
                           <tr>
                             <th><b>IFSC Code</b></th>
-                            <td>BHFHK123456</td>
+                            <td>
+                              <div class="text-capitalize"><?= esc($employee['accounts'][0]['bank_ifsc'] ?? '-NA-') ?>
+                              </div>
+                            </td>
                           </tr>
                           <tr>
                             <th><b>Branch Name</b></th>
-                            <td>GZB</td>
+                            <td>
+                              <div class="text-capitalize"><?= esc($employee['accounts'][0]['branch_name'] ?? '-NA-') ?>
+                              </div>
+                            </td>
                           </tr>
                         </table>
                       </div>
                       <!-- emergency contact details -->
                       <div class="table-responsive mt-3">
+                        <table class="table table-striped table-bordered table-hover" id="emergencyTable">
+                          <thead>
+                            <tr>
+                              <th class="text-danger-700" colspan="4">
+                                Emergency Contact Details
+                              </th>
+                            </tr>
+                            <tr>
+                              <th><b>Name</b></th>
+                              <th><b>Relation</b></th>
+                              <th><b>Contact No.</b></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <?php if (!empty($employee['emergency'])): ?>
+                              <?php foreach ($employee['emergency'] as $contact): ?>
+                                <tr>
+                                  <td><?= esc($contact['name']) ?></td>
+                                  <td><?= esc($contact['relation']) ?></td>
+                                  <td><?= esc($contact['contact_no']) ?></td>
+                                </tr>
+                              <?php endforeach; ?>
+                            <?php else: ?>
+                              <tr>
+                                <td colspan="3">No emergency contacts found.</td>
+                              </tr>
+                            <?php endif; ?>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!-- compliance details -->
+                      <div class="table-responsive mt-3">
                         <table class="table table-striped table-bordered table-hover">
                           <tr>
-                            <th class="text-danger-700" colspan="4">
-                              Emergency Contact Details
+                            <th class="text-danger-700" colspan="3">
+                              Compliance Details
                             </th>
                           </tr>
                           <tr>
-                            <th><b>Name</b></th>
-                            <th><b>Relation</b></th>
-                            <th><b>Contact No.</b></th>
+                            <th style="width: 30%"><b>ESIC No.</b></th>
+                            <td>
+                              <div class="text-capitalize"><?= esc($employee['compliance'][0]['esic_no'] ?? '-NA-') ?>
+                              </div>
+                            </td>
                           </tr>
                           <tr>
-                            <td>abc</td>
-                            <td>Mother</td>
-                            <td>9999999999</td>
+                            <th><b>UAN No.</b></th>
+                            <td>
+                              <div class="text-capitalize"><?= esc($employee['compliance'][0]['uan_no'] ?? '-NA-') ?>
+                              </div>
+                            </td>
                           </tr>
                           <tr>
-                            <td>abc</td>
-                            <td>son</td>
-                            <td>9999999999</td>
+                            <th><b>Medical Claim Card No.</b></th>
+                            <td>
+                              <div class="text-capitalize">
+                                <?= esc($employee['compliance'][0]['medical_card_no'] ?? '-NA-') ?>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th><b>Any Other</b></th>
+                            <td>
+                              <div class="text-capitalize"><?= esc($employee['compliance'][0]['any_other'] ?? '-NA-') ?>
+                              </div>
+                            </td>
                           </tr>
                         </table>
                       </div>
@@ -417,11 +524,10 @@
         <!-- /traffic sources -->
       </div>
     </div>
-    <!-- /main charts -->
   </div>
 </div>
-</div>
+
+
+
 <!-- /content-wrapper -->
-</div>
-</div>
 <?= $this->endSection() ?>

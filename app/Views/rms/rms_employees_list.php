@@ -150,7 +150,10 @@
                             <?php foreach ($employees as $emp): ?>
                               <tr role="row" class="<?= ($i % 2 === 0) ? 'even' : 'odd' ?>">
                                 <td class="sorting_1">
-                                  <a href="<?= base_url('/emp_profile_view') ?>">
+                                  <!-- <a href="<?//= base_url('emp_profile_view/($id)') ?>">
+                                    <?//= esc($emp->personal_info_id) ?>
+                                  </a> -->
+                                  <a href="<?= base_url('employee/profile/' . $emp->personal_info_id) ?>">
                                     <?= esc($emp->personal_info_id) ?>
                                   </a>
                                 </td>
@@ -194,5 +197,6 @@
     </div>
   </div>
 </div>
+
 <!-- /content-wrapper -->
 <?= $this->endSection() ?>

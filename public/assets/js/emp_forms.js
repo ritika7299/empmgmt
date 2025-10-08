@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', updateDeleteButtons);
         <input type="text" name="relation[]" class="form-control" required placeholder="Enter Relation" />
       </td>
       <td>
-        <input type="text" name="contact[]" class="form-control" maxlength="10" required placeholder="Enter Contact Number" />
+        <input type="text" name="contact_no[]" class="form-control" maxlength="10" required placeholder="Enter Contact Number" />
       </td>
       <td>
         <div class="d-flex">

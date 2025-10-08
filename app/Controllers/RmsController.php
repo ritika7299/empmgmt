@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers;
 use App\Models\PersonalModel;
+use Config\Database;
 class RmsController extends BaseController
 {
     protected $personalModel;
@@ -11,14 +12,12 @@ class RmsController extends BaseController
     // view employee list
     public function employees_list()
     {
-        // $data['title'] = 'RMS- Employee List';
-        // return view('rms/rms_employees_list', $data);
         $model = new PersonalModel();
         $data['title'] = 'RMS- Employee List';
         $data['employees'] = $model->getEmployeeWithDetails();
         return view('rms/rms_employees_list', $data);
     }
-    //view incomplete emp list
+    //view incomplete employee list
     public function incomplete_employees_list()
     {
         $model = new PersonalModel();
@@ -26,12 +25,14 @@ class RmsController extends BaseController
         $data['employees'] = $model->getEmployeeWithDetails();
         return view('rms/rms_incomplete_emp_list', $data);
     }
+
     // view new joining 
     public function new_joining()
     {
         $data['title'] = 'RMS- New Joining';
         return view('rms/rms_new_joining', $data);
     }
+
     //save personal info details
     public function personal_info_save()
     {
@@ -82,12 +83,15 @@ class RmsController extends BaseController
         // Agar aapne multi-table model approach banaya hai to use karein:
         $lastId = $this->personalModel->saveData('personal_info', $insertData);
         $session->set('personal_info_id', $lastId);
+        $session->set('martial_status', $data['martialstatus']);
+
         return $this->response->setJSON([
             'success' => true,
             'message' => 'Personal Info Saved Successfully',
             'id' => $lastId
         ]);
     }
+
     //save identification details
     public function identification_details_save()
     {
@@ -139,6 +143,7 @@ class RmsController extends BaseController
             'id' => $lastId
         ]);
     }
+
     //save qualification details
     public function qualification_details_save()
     {
@@ -226,7 +231,7 @@ class RmsController extends BaseController
     {
         $session = session();
         $personalInfoId = $session->get('personal_info_id');
-
+        $maritalStatus = $session->get('marital_status'); // Get marital status
         if (!$personalInfoId) {
             return $this->response->setJSON([
                 'success' => false,
@@ -235,13 +240,13 @@ class RmsController extends BaseController
         }
         $data = $this->request->getPost();
         $familyEntries = [];
-
+        $selectedNominee = $data['is_nominee'] ?? '';
         // Father
         $familyEntries[] = [
             'personal_info_id' => $personalInfoId,
             'name' => $data['fathername'],
             'relation' => 'Father',
-            'is_nominee' => isset($data['father_is_nominee']) ? true : false,
+            'is_nominee' => ($selectedNominee === 'Father'),
             'dob' => null
         ];
         // Mother
@@ -249,18 +254,19 @@ class RmsController extends BaseController
             'personal_info_id' => $personalInfoId,
             'name' => $data['mothername'],
             'relation' => 'Mother',
-            'is_nominee' => isset($data['mother_is_nominee']) ? true : false,
+            'is_nominee' => ($selectedNominee === 'Mother'),
             'dob' => null
         ];
-        // Spouse
-        $familyEntries[] = [
-            'personal_info_id' => $personalInfoId,
-            'name' => $data['spousename'],
-            'relation' => 'Spouse',
-            'is_nominee' => isset($data['spouse_is_nominee']) ? true : false,
-            'dob' => null
-        ];
-
+        // Spouse (only if married)
+        if ($maritalStatus === 'married') {
+            $familyEntries[] = [
+                'personal_info_id' => $personalInfoId,
+                'name' => $data['spousename'],
+                'relation' => 'Spouse',
+                'is_nominee' => ($selectedNominee === 'Spouse'),
+                'dob' => null
+            ];
+        }
         // Children
         if (isset($data['children_name']) && is_array($data['children_name'])) {
             foreach ($data['children_name'] as $index => $childName) {
@@ -273,7 +279,6 @@ class RmsController extends BaseController
                 ];
             }
         }
-        // Save entries
         $this->personalModel = new PersonalModel();
         foreach ($familyEntries as $entry) {
             $this->personalModel->saveData('family_info', $entry);
@@ -332,59 +337,66 @@ class RmsController extends BaseController
             'message' => 'Accounts details Saved Successfully',
             'id' => $lastId
         ]);
-
     }
+
     // save emergency details
     public function emergency_details_save()
     {
         $session = session();
         $personalInfoId = $session->get('personal_info_id');
-        // Check if personal_info_id is available
+
         if (!$personalInfoId) {
             return $this->response->setJSON([
                 'success' => false,
                 'message' => 'Personal Info ID not found. Please complete personal info form first.'
             ]);
         }
+        // Get posted form data
+        $data = $this->request->getPost();
+        // Validate that name, relation, contact_no are arrays
+        if (
+            !isset($data['name'], $data['relation'], $data['contact_no']) ||
+            !is_array($data['name']) || !is_array($data['relation']) || !is_array($data['contact_no'])
+        ) {
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'Invalid emergency contact format.'
+            ]);
+        }
         // Initialize model
         if (!isset($this->personalModel)) {
             $this->personalModel = new PersonalModel();
         }
-
-        // Validation rules (you can enhance this further)
-        $rules = [
-            'name' => 'required',
-            'relation' => 'required',
-            'contact_no' => 'required',
-        ];
-
-        if (!$this->validate($rules)) {
+        $inserted = [];
+        foreach ($data['name'] as $i => $name) {
+            // Basic empty check
+            if (empty($name) || empty($data['relation'][$i]) || empty($data['contact_no'][$i])) {
+                continue;
+            }
+            $insertData = [
+                'personal_info_id' => $personalInfoId,
+                'name' => $name,
+                'relation' => $data['relation'][$i],
+                'contact_no' => $data['contact_no'][$i],
+                'entry_emp' => $session->get('emp_id'), // If available
+                'entry_ip' => $this->request->getIPAddress(),
+            ];
+            $lastId = $this->personalModel->saveData('emergency_info', $insertData);
+            $inserted[] = $lastId;
+        }
+        if (empty($inserted)) {
             return $this->response->setJSON([
                 'success' => false,
-                'errors' => $this->validator->getErrors()
+                'message' => 'No valid emergency contacts were saved.'
             ]);
         }
-
-        // Get posted form data
-        $data = $this->request->getPost();
-
-        // Prepare data for insert
-        $insertData = [
-            'personal_info_id' => $personalInfoId,
-            'name' => $data['name'],
-            'relation' => $data['relation'],
-            'contact_no' => $data['contact_no']
-        ];
-
-        // Save to 'emergency_info' table via your custom model method
-        $lastId = $this->personalModel->saveData('emergency_info', $insertData);
-
         return $this->response->setJSON([
             'success' => true,
             'message' => 'Emergency details saved successfully.',
-            'id' => $lastId
+            'inserted_ids' => $inserted
         ]);
     }
+
     //save joining details
     public function joining_details_save()
     {
@@ -430,6 +442,7 @@ class RmsController extends BaseController
             'id' => $lastId
         ]);
     }
+
     //save compliance details
     public function compliance_details_save()
     {
@@ -478,6 +491,7 @@ class RmsController extends BaseController
             'id' => $lastId
         ]);
     }
+
     // save upload details
     public function upload_details_save()
     {
@@ -521,10 +535,25 @@ class RmsController extends BaseController
         ]);
         return redirect()->to('/employeeslist')->with('success', 'Your form submitted successfully.');
     }
-    public function emp_profile_view()
+
+    //employee profile view
+    public function emp_profile_view($personalInfoId)
     {
-        $data['title'] = 'RMS- Employee Profile';
-        return view('rms/rms_view_emp_profile', $data);
+        $employeeModel = new PersonalModel();
+        $employee = $employeeModel->getEmployeeDetails($personalInfoId);
+        if (!$employee) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("Employee not found");
+        }
+        $emergencyContacts = $employeeModel->getEmergencyContacts($personalInfoId);
+        $qualifications = $employeeModel->getQualifications($personalInfoId);
+        $family = $employeeModel->getFamilyDetails($personalInfoId);
+        $employee['emergency'] = $emergencyContacts;
+        $employee['qualifications'] = $qualifications;
+        $employee['family'] = $family;
+        return view('rms/rms_view_emp_profile', [
+            'employee' => $employee,
+            'title' => 'Employee Profile'
+        ]);
     }
 
 }

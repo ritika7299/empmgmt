@@ -386,19 +386,19 @@
                               <!-- For Certificate -->
                               <input type="hidden" name="qualification_level[]" value="Certificate">
                               <div class="form-group row">
-                                <label class="col-form-label col-lg-3">School/Collage
+                                <label class="col-form-label col-lg-3">School
                                   <span class="text-danger">*</span></label>
                                 <div class="col-lg-9">
                                   <input type="text" name="institute_name[]" class="form-control" value="" required
-                                    placeholder="Enter School/Collage name...." />
+                                    placeholder="Enter School name...." />
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label class="col-form-label col-lg-3">Board/University
+                                <label class="col-form-label col-lg-3">Board
                                   <span class="text-danger">*</span></label>
                                 <div class="col-lg-9">
                                   <input type="text" name="board_university[]" class="form-control" required
-                                    placeholder="Enter Board/University name...." />
+                                    placeholder="Enter Board name...." />
                                 </div>
                               </div>
                               <div class="form-group row">
@@ -422,7 +422,6 @@
                                   </div>
                                 </div>
                               </div>
-
                               <div class="form-group row">
                                 <label class="col-form-label col-lg-3">Marks Obtain
                                   <span class="text-danger">*</span></label>
@@ -439,23 +438,24 @@
                               </div>
                             </fieldset>
                             <fieldset class="mb-3">
+
                               <legend class="text-uppercase font-size-sm font-weight-bold">
                                 Intermediate (12th)
                               </legend>
                               <div class="form-group row">
-                                <label class="col-form-label col-lg-3">School/Collage
+                                <label class="col-form-label col-lg-3">School
                                   <span class="text-danger">*</span></label>
                                 <div class="col-lg-9">
                                   <input type="text" name="institute_name[]" class="form-control" required
-                                    placeholder="Enter School/Collage name...." />
+                                    placeholder="Enter School name...." />
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label class="col-form-label col-lg-3">Board/University
+                                <label class="col-form-label col-lg-3">Board
                                   <span class="text-danger">*</span></label>
                                 <div class="col-lg-9">
                                   <input type="text" name="board_university[]" class="form-control" required
-                                    placeholder="Enter Board/University name...." />
+                                    placeholder="Enter Board name...." />
                                 </div>
                               </div>
                               <div class="form-group row">
@@ -499,19 +499,19 @@
                                 Graduation
                               </legend>
                               <div class="form-group row">
-                                <label class="col-form-label col-lg-3">School/Collage
+                                <label class="col-form-label col-lg-3">College
                                   <span class="text-danger">*</span></label>
                                 <div class="col-lg-9">
                                   <input type="text" name="institute_name[]" class="form-control" required
-                                    placeholder="Enter School/Collage name...." />
+                                    placeholder="Enter College name...." />
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label class="col-form-label col-lg-3">Board/University
+                                <label class="col-form-label col-lg-3">University
                                   <span class="text-danger">*</span></label>
                                 <div class="col-lg-9">
                                   <input type="text" name="board_university[]" class="form-control" required
-                                    placeholder="Enter Board/University name...." />
+                                    placeholder="Enter University name...." />
                                 </div>
                               </div>
                               <div class="form-group row">
@@ -535,7 +535,6 @@
                                   </div>
                                 </div>
                               </div>
-
                               <div class="form-group row">
                                 <label class="col-form-label col-lg-3">Marks Obtain
                                   <span class="text-danger">*</span></label>
@@ -556,19 +555,19 @@
                                 Post Graduation
                               </legend>
                               <div class="form-group row">
-                                <label class="col-form-label col-lg-3">School/Collage
+                                <label class="col-form-label col-lg-3">College
                                   <span class="text-danger">*</span></label>
                                 <div class="col-lg-9">
                                   <input type="text" name="institute_name[]" class="form-control" required
-                                    placeholder="Enter School/Collage name...." />
+                                    placeholder="Enter College name...." />
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label class="col-form-label col-lg-3">Board/University
+                                <label class="col-form-label col-lg-3">University
                                   <span class="text-danger">*</span></label>
                                 <div class="col-lg-9">
                                   <input type="text" name="board_university[]" class="form-control" required
-                                    placeholder="Enter Board/University name...." />
+                                    placeholder="Enter University name...." />
                                 </div>
                               </div>
                               <div class="form-group row">
@@ -613,19 +612,19 @@
                                 Certificate Course
                               </legend>
                               <div class="form-group row">
-                                <label class="col-form-label col-lg-3">School/Collage
+                                <label class="col-form-label col-lg-3">College
                                   <span class="text-danger">*</span></label>
                                 <div class="col-lg-9">
                                   <input type="text" name="institute_name[]" class="form-control" required
-                                    placeholder="Enter School/Collage name...." />
+                                    placeholder="Enter College name...." />
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label class="col-form-label col-lg-3">Board/University
+                                <label class="col-form-label col-lg-3">University
                                   <span class="text-danger">*</span></label>
                                 <div class="col-lg-9">
                                   <input type="text" name="board_university[]" class="form-control" required
-                                    placeholder="Enter Board/University name...." />
+                                    placeholder="Enter University name...." />
                                 </div>
                               </div>
                               <div class="form-group row">
@@ -738,7 +737,6 @@
                                   class="form-control" required placeholder="Enter PIN" />
                               </div>
                             </div>
-
                             <div class="form-group row">
                               <div class="form-check ml-2">
                                 <label class="form-check-label">
@@ -822,51 +820,47 @@
                           <form class="form-validate-jquery" method="post"
                             action="<?= base_url('/family_details_save') ?>" id="family_info">
                             <fieldset class="mb-3">
+                              <!-- Father's Name -->
                               <div class="form-group row">
-                                <label class="col-form-label col-lg-3">Father's Name
-                                  <span class="text-danger">*</span></label>
-                                <div class="col-lg-9 d-flex">
+                                <label class="col-form-label col-lg-3">Father's Name <span
+                                    class="text-danger">*</span></label>
+                                <div class="col-lg-9 d-flex align-items-center">
                                   <input type="text" name="fathername" class="form-control" required
                                     placeholder="Enter Father Name" />
-                                  <div class="form-check form-check-inline ml-5 col-md-2">
-                                    <label class="form-check-label">
-                                      <input type="checkbox" name="styled_inline_radio"
-                                        class="form-check-input nominee-checkbox" id="is_nominee"
-                                        name="is_nominee[father]" value="true" required />
-                                      Is Nominee
-                                    </label>
+                                  <div class="custom-control custom-radio custom-control-inline ml-5">
+                                    <input type="radio" class="custom-control-input" name="is_nominee"
+                                      id="nominee_father" value="Father">
+                                    <label class="custom-control-label" for="nominee_father">Is Nominee</label>
                                   </div>
                                 </div>
                               </div>
+
+                              <!-- Mother's Name -->
                               <div class="form-group row">
-                                <label class="col-form-label col-lg-3">Mother's Name
-                                  <span class="text-danger">*</span></label>
-                                <div class="col-lg-9 d-flex">
+                                <label class="col-form-label col-lg-3">Mother's Name <span
+                                    class="text-danger">*</span></label>
+                                <div class="col-lg-9 d-flex align-items-center">
                                   <input type="text" name="mothername" class="form-control" required
                                     placeholder="Enter Mother Name" />
-                                  <div class="form-check form-check-inline ml-5 col-md-2">
-                                    <label class="form-check-label">
-                                      <input type="checkbox" name="styled_inline_radio"
-                                        class="form-check-input nominee-checkbox" id="is_nominee"
-                                        name="is_nominee[mother]" value="true" required />
-                                      Is Nominee
-                                    </label>
+                                  <div class="custom-control custom-radio custom-control-inline ml-5">
+                                    <input type="radio" class="custom-control-input" name="is_nominee"
+                                      id="nominee_mother" value="Mother">
+                                    <label class="custom-control-label" for="nominee_mother">Is Nominee</label>
                                   </div>
                                 </div>
                               </div>
+
+                              <!-- Spouse Name -->
                               <div class="form-group row">
-                                <label class="col-form-label col-lg-3">Spouse Name
-                                  <span class="text-danger">*</span></label>
-                                <div class="col-lg-9 d-flex">
+                                <label class="col-form-label col-lg-3">Spouse Name <span
+                                    class="text-danger">*</span></label>
+                                <div class="col-lg-9 d-flex align-items-center">
                                   <input type="text" name="spousename" class="form-control" required
                                     placeholder="Enter Spouse Name" />
-                                  <div class="form-check form-check-inline ml-5 col-md-2">
-                                    <label class="form-check-label">
-                                      <input type="checkbox" name="styled_inline_radio"
-                                        class="form-check-input nominee-checkbox" id="is_nominee"
-                                        name="is_nominee[father]" value="true" required />
-                                      Is Nominee
-                                    </label>
+                                  <div class="custom-control custom-radio custom-control-inline ml-5">
+                                    <input type="radio" class="custom-control-input" name="is_nominee"
+                                      id="nominee_spouse" value="Spouse">
+                                    <label class="custom-control-label" for="nominee_spouse">Is Nominee</label>
                                   </div>
                                 </div>
                               </div>
@@ -1090,7 +1084,7 @@
                                     <option value="Department One">
                                       Department One
                                     </option>
-                                    <option value="Department two">
+                                    <option value="Department Two">
                                       Department two
                                     </option>
                                   </select>
@@ -1103,10 +1097,10 @@
                                     <option>
                                       Select
                                     </option>
-                                    <option value="desi1">
+                                    <option value=" Designation One">
                                       Designation One
                                     </option>
-                                    <option value="desi2">
+                                    <option value="Designation two">
                                       Designation two
                                     </option>
                                   </select>
@@ -1121,8 +1115,8 @@
                                     <option>
                                       Select
                                     </option>
-                                    <option value="delhi">Delhi</option>
-                                    <option value="uttarpardesh">
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Uttar pardesh">
                                       Uttar Pardesh
                                     </option>
                                   </select>
@@ -1133,14 +1127,13 @@
                                   <select name="district" data-placeholder="Select States"
                                     class="form-control form-control-select2 select2-hidden-accessible" required>
                                     <option>Select</option>
-                                    <option value="westdelhi">West Delhi</option>
-                                    <option value="centraldelhi">
+                                    <option value="West Delhi">West Delhi</option>
+                                    <option value="Central Delhi">
                                       Central Delhi
                                     </option>
                                   </select>
                                 </div>
                               </div>
-
                               <div class="form-group row">
                                 <label class="col-form-label col-lg-3">Date of Joining
                                   <span class="text-danger">*</span></label>
@@ -1160,7 +1153,6 @@
                         </div>
                       </div>
                     </div>
-
                     <div class="tab-pane fade" id="solid-rounded-tab9">
                       <div class="card">
                         <div class="card-header header-elements-inline bg-blue-600">

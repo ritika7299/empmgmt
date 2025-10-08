@@ -146,10 +146,10 @@
                           <tr role="row" class="odd">
                             <td class="sorting_1">
                               <a href="javascript::void(0);">
-                                Ritika</a>
+                                101</a>
                             </td>
-                            <td>Ritika</td>
-                            <td>Ritika</td>
+                            <td>ABC</td>
+                            <td>xyz</td>
                             <td>14-08-2025</td>
                             <td>Deptt One</td>
                             <td class="text-center">
@@ -159,10 +159,10 @@
                           <tr role="row" class="even">
                             <td class="sorting_1">
                               <a href="javascript::void(0);">
-                                Ritika</a>
+                                102</a>
                             </td>
-                            <td>Ritika</td>
-                            <td>Ritika</td>
+                            <td>ABC</td>
+                            <td>xyz</td>
                             <td>14-08-2025</td>
                             <td>Deptt One</td>
                             <td class="text-center">
@@ -199,70 +199,5 @@
   </div>
 </div>
 <!-- /content-wrapper -->
-<div id="modal_backdrop" class="modal fade" data-backdrop="false" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header bg-blue-600">
-        <h5 class="modal-title">Exist Employee</h5>
-        <button type="button" class="close" data-dismiss="modal">
-          &times;
-        </button>
-      </div>
-      <!-- modal body -->
-      <div class="modal-body">
-        <div class="form-group row">
-          <label class="col-form-label col-lg-3">Create Date
-          </label>
-          <div class="col-lg-9">
-            <div class="input-group">
-              <input type="date" class="form-control datepicker hasDatepicker" placeholder="dd/mm/yyyy" id="datepick" />
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-form-label col-lg-3">
-          </label>
-          <div class="col-lg-9">
-            <div class="input-group">
-              <input type="text" name="altmobile" class="form-control" required
-                placeholder="Enter Reason here Mobile number....." />
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-form-label col-lg-3">
-          </label>
-          <div class="col-lg-9">
-            <select name="select2" data-placeholder="Select Reason"
-              class="form-control form-control-select2 select2-hidden-accessible" required="" data-fouc=""
-              data-select2-id="1" tabindex="-1" aria-hidden="true" aria-invalid="false">
-              <option data-select2-id="3">
-                Select
-              </option>
-              <option value="tender_over" data-select2-id="11">
-                Tender Over
-              </option>
-              <option value="resignation" data-select2-id="11">
-                Resignation
-              </option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <!-- /modal-body -->
-      <div class="modal-footer">
-        <!-- <button
-                    type="button"
-                    class="btn btn-link"
-                    data-dismiss="modal"
-                  >
-                    Close
-                  </button> -->
-        <button type="button" class="btn bg-primary">
-          Submit
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
+
 <?= $this->endSection() ?>

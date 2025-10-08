@@ -1,0 +1,838 @@
+DEBUG - 2025-08-25 05:01:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 05:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 05:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 05:02:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-25 05:09:43 --> ErrorException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^ in C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'SELECT "qualifi...')
+#2 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualifi...')
+#3 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualifi...')
+#4 C:\xampp\htdocs\empmgmt\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualifi...', Array, false)
+#5 C:\xampp\htdocs\empmgmt\app\Models\PersonalModel.php(312): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\empmgmt\app\Controllers\RmsController.php(610): App\Models\PersonalModel->getQualifications('158')
+#7 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+#8 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#9 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\empmgmt\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\empmgmt\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\empmgmt\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-25 05:09:43 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+[Method: GET, Route: employee/profile/158]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 2 APPPATH\Models\PersonalModel.php(312): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\RmsController.php(610): App\Models\PersonalModel->getQualifications('158')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-25 05:09:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 4 APPPATH\Models\PersonalModel.php(312): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\RmsController.php(610): App\Models\PersonalModel->getQualifications('158')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-25 05:09:43 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^', 'C:\\xampp\\htdocs\\empmgmt\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 6 APPPATH\Models\PersonalModel.php(312): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\RmsController.php(610): App\Models\PersonalModel->getQualifications('158')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-25 05:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-25 05:10:12 --> ErrorException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^ in C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'SELECT "qualifi...')
+#2 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualifi...')
+#3 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualifi...')
+#4 C:\xampp\htdocs\empmgmt\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualifi...', Array, false)
+#5 C:\xampp\htdocs\empmgmt\app\Models\PersonalModel.php(312): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\empmgmt\app\Controllers\RmsController.php(610): App\Models\PersonalModel->getQualifications('158')
+#7 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+#8 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#9 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\empmgmt\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\empmgmt\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\empmgmt\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-25 05:10:12 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+[Method: GET, Route: employee/profile/158]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 2 APPPATH\Models\PersonalModel.php(312): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\RmsController.php(610): App\Models\PersonalModel->getQualifications('158')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-25 05:10:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 4 APPPATH\Models\PersonalModel.php(312): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\RmsController.php(610): App\Models\PersonalModel->getQualifications('158')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-25 05:10:12 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^', 'C:\\xampp\\htdocs\\empmgmt\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 6 APPPATH\Models\PersonalModel.php(312): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\RmsController.php(610): App\Models\PersonalModel->getQualifications('158')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-25 05:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 05:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-25 05:12:59 --> ErrorException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^ in C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'SELECT "qualifi...')
+#2 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualifi...')
+#3 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualifi...')
+#4 C:\xampp\htdocs\empmgmt\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualifi...', Array, false)
+#5 C:\xampp\htdocs\empmgmt\app\Models\PersonalModel.php(312): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\empmgmt\app\Controllers\RmsController.php(610): App\Models\PersonalModel->getQualifications('158')
+#7 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+#8 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#9 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\empmgmt\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\empmgmt\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\empmgmt\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-25 05:12:59 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+[Method: GET, Route: employee/profile/158]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 2 APPPATH\Models\PersonalModel.php(312): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\RmsController.php(610): App\Models\PersonalModel->getQualifications('158')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-25 05:12:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 4 APPPATH\Models\PersonalModel.php(312): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\RmsController.php(610): App\Models\PersonalModel->getQualifications('158')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-25 05:12:59 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^', 'C:\\xampp\\htdocs\\empmgmt\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 6 APPPATH\Models\PersonalModel.php(312): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\RmsController.php(610): App\Models\PersonalModel->getQualifications('158')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-25 05:14:03 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: employee/profile/158]
+in SYSTEMPATH\Database\BaseConnection.php on line 941.
+ 1 SYSTEMPATH\Model.php(714): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(920): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\RmsController.php(610): CodeIgniter\Model->__call('getQualifications', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-25 06:42:09 --> ErrorException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^ in C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'SELECT "qualifi...')
+#2 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualifi...')
+#3 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualifi...')
+#4 C:\xampp\htdocs\empmgmt\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualifi...', Array, false)
+#5 C:\xampp\htdocs\empmgmt\app\Models\PersonalModel.php(321): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\empmgmt\app\Controllers\RmsController.php(606): App\Models\PersonalModel->getQualifications('158')
+#7 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+#8 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#9 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\empmgmt\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\empmgmt\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\empmgmt\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-25 06:42:09 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+[Method: GET, Route: employee/profile/158]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 2 APPPATH\Models\PersonalModel.php(321): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\RmsController.php(606): App\Models\PersonalModel->getQualifications('158')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-25 06:42:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 4 APPPATH\Models\PersonalModel.php(321): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\RmsController.php(606): App\Models\PersonalModel->getQualifications('158')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-25 06:42:09 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^', 'C:\\xampp\\htdocs\\empmgmt\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 6 APPPATH\Models\PersonalModel.php(321): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\RmsController.php(606): App\Models\PersonalModel->getQualifications('158')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-25 06:43:20 --> ErrorException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^ in C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'SELECT "qualifi...')
+#2 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualifi...')
+#3 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualifi...')
+#4 C:\xampp\htdocs\empmgmt\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualifi...', Array, false)
+#5 C:\xampp\htdocs\empmgmt\app\Models\PersonalModel.php(321): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\empmgmt\app\Controllers\RmsController.php(606): App\Models\PersonalModel->getQualifications('158')
+#7 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+#8 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#9 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\empmgmt\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\empmgmt\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\empmgmt\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-25 06:43:20 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+[Method: GET, Route: employee/profile/158]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 2 APPPATH\Models\PersonalModel.php(321): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\RmsController.php(606): App\Models\PersonalModel->getQualifications('158')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-25 06:43:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 4 APPPATH\Models\PersonalModel.php(321): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\RmsController.php(606): App\Models\PersonalModel->getQualifications('158')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-25 06:43:20 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^', 'C:\\xampp\\htdocs\\empmgmt\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_type", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 6 APPPATH\Models\PersonalModel.php(321): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\RmsController.php(606): App\Models\PersonalModel->getQualifications('158')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-25 06:45:17 --> ErrorException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^ in C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'SELECT "qualifi...')
+#2 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualifi...')
+#3 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualifi...')
+#4 C:\xampp\htdocs\empmgmt\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualifi...', Array, false)
+#5 C:\xampp\htdocs\empmgmt\app\Models\PersonalModel.php(321): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\empmgmt\app\Controllers\RmsController.php(606): App\Models\PersonalModel->getQualifications('158')
+#7 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+#8 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#9 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\empmgmt\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\empmgmt\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\empmgmt\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-25 06:45:17 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+[Method: GET, Route: employee/profile/158]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 2 APPPATH\Models\PersonalModel.php(321): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\RmsController.php(606): App\Models\PersonalModel->getQualifications('158')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-25 06:45:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 4 APPPATH\Models\PersonalModel.php(321): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\RmsController.php(606): App\Models\PersonalModel->getQualifications('158')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-25 06:45:17 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^', 'C:\\xampp\\htdocs\\empmgmt\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 6 APPPATH\Models\PersonalModel.php(321): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\RmsController.php(606): App\Models\PersonalModel->getQualifications('158')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-25 06:45:18 --> ErrorException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^ in C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'SELECT "qualifi...')
+#2 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualifi...')
+#3 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualifi...')
+#4 C:\xampp\htdocs\empmgmt\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualifi...', Array, false)
+#5 C:\xampp\htdocs\empmgmt\app\Models\PersonalModel.php(321): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\empmgmt\app\Controllers\RmsController.php(606): App\Models\PersonalModel->getQualifications('158')
+#7 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+#8 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#9 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\empmgmt\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\empmgmt\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\empmgmt\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-25 06:45:18 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+[Method: GET, Route: employee/profile/158]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 2 APPPATH\Models\PersonalModel.php(321): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\RmsController.php(606): App\Models\PersonalModel->getQualifications('158')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-25 06:45:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 4 APPPATH\Models\PersonalModel.php(321): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\RmsController.php(606): App\Models\PersonalModel->getQualifications('158')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-25 06:45:18 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^', 'C:\\xampp\\htdocs\\empmgmt\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 6 APPPATH\Models\PersonalModel.php(321): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\RmsController.php(606): App\Models\PersonalModel->getQualifications('158')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-25 06:59:32 --> ErrorException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^ in C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\empmgmt\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'SELECT "qualifi...')
+#2 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualifi...')
+#3 C:\xampp\htdocs\empmgmt\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualifi...')
+#4 C:\xampp\htdocs\empmgmt\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualifi...', Array, false)
+#5 C:\xampp\htdocs\empmgmt\app\Models\PersonalModel.php(329): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\empmgmt\app\Controllers\RmsController.php(627): App\Models\PersonalModel->getQualifications('158')
+#7 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+#8 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+#9 C:\xampp\htdocs\empmgmt\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\empmgmt\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\empmgmt\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\empmgmt\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-25 06:59:32 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+[Method: GET, Route: employee/profile/158]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 2 APPPATH\Models\PersonalModel.php(329): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\RmsController.php(627): App\Models\PersonalModel->getQualifications('158')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-25 06:59:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 4 APPPATH\Models\PersonalModel.php(329): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\RmsController.php(627): App\Models\PersonalModel->getQualifications('158')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-25 06:59:32 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  relation &quot;qualifications&quot; does not exist
+LINE 2: FROM &quot;qualifications&quot;
+             ^', 'C:\\xampp\\htdocs\\empmgmt\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = \'158\'
+ORDER BY "id" ASC')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "qualification_level", "board_university", "passing_year"
+FROM "qualifications"
+WHERE "personal_info_id" = :personal_info_id:
+ORDER BY "id" ASC', [...], false)
+ 6 APPPATH\Models\PersonalModel.php(329): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\RmsController.php(627): App\Models\PersonalModel->getQualifications('158')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->emp_profile_view('158')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-25 08:30:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:31:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:34:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:35:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:35:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:40:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:42:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:42:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 08:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:16:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:17:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:18:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:18:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:20:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:23:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:23:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:24:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:25:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:26:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:26:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:26:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:27:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 09:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 10:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 10:00:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 10:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 10:50:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-08-25 10:50:24 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\rms\rms_employees_list.php on line 162.
+ 1 APPPATH\Views\rms\rms_employees_list.php(162): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\empmgmt\\app\\Views\\rms\\rms_employees_list.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('rms/rms_employees_list', [], true)
+ 5 APPPATH\Controllers\RmsController.php(20): view('rms/rms_employees_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RmsController->employees_list()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RmsController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-25 10:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 10:51:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 10:51:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 10:53:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 10:53:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 10:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 10:54:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 10:54:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 10:55:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 10:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 10:55:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 10:55:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 11:14:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 11:15:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 11:15:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 11:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 11:16:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 11:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 11:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 11:18:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 11:18:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 11:18:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 11:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 11:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 11:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-25 11:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

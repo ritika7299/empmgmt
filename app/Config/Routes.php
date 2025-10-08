@@ -26,6 +26,11 @@ $routes->post('/emergency_details_save', 'RmsController::emergency_details_save'
 $routes->post('/joining_details_save', 'RmsController::joining_details_save');
 $routes->post('/compliance_details_save', 'RmsController::compliance_details_save');
 $routes->post('/upload_details_save', 'RmsController::upload_details_save');
-$routes->get('/emp_profile_view', 'RmsController::emp_profile_view');
+// $routes->get('/emp_profile_view', 'RmsController::emp_profile_view');
+$routes->get('employee/profile/(:num)', 'RmsController::emp_profile_view/$1');
+$routes->get('getEmergencyContacts', 'EmergencyContact::getContacts');
+
+
+
 
 
